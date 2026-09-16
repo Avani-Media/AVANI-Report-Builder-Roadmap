@@ -264,10 +264,14 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   font-weight:750;
   line-height:1.5;
 }
-
+.server-state{margin-top:12px;padding:10px 12px;border:1px solid var(--border,#dbe4f0);border-radius:12px;background:#f7f9fd;color:#52627c;font-size:12px;font-weight:700}
+.server-state.is-live{background:#edf9f6;border-color:#ccece4;color:#177565}
+.server-state.is-dirty{background:#fff8e8;border-color:#f3dfaa;color:#8a6518}
+.server-state.is-error{background:#fff0f0;border-color:#f0cccc;color:#9c3333}
+.auth-dialog form{min-width:min(520px,calc(100vw - 40px))}.auth-dialog .dialog-head p{margin:7px 0 0;color:#6f7f98;font-size:13px}.auth-error{margin:12px 0;padding:10px 12px;border-radius:10px;background:#fff0f0;color:#9c3333;font-size:13px}
   </style>
 </head>
-<body data-roadmap-src="roadmap-data.json">
+<body data-roadmap-src="roadmap-data.json" data-supabase-url="https://qrkghrvlcjonkayxzhwg.supabase.co" data-supabase-key="sb_publishable_9nLOMVRVhlNV9cJNQ8_fFg_X6N-vO3y" data-supabase-table="report_builder_roadmap" data-supabase-row="main">
   <div class="shell">
     <section class="hero" aria-labelledby="page-title">
       <div>
@@ -315,13 +319,16 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
           <span class="summary-chevron">⌄</span>
         </summary>
         <div class="manage-body">
-          <div class="manage-note">Edit Roadmap opens the month-planning workspace. New work starts Unscheduled; drag it into a month when timing is decided. Changes stay in this browser until you download roadmap-data.json and replace the root GitHub file.</div>
+          <div class="manage-note">Edit directly from this live roadmap. New work starts Unscheduled; drag it into a month when timing is decided, then save the changes for everyone.</div>
+          <div class="server-state" id="server-status" role="status">Connecting to roadmap storage…</div>
           <div class="editor-actions">
             <button class="tool-button" id="edit-roadmap-button" type="button">Edit Roadmap</button>
             <button class="tool-button primary" id="add-milestone-button" type="button" hidden>+ Add milestone</button>
-            <button class="tool-button" id="export-json-button" type="button">Download roadmap-data.json</button>
+            <button class="tool-button primary" id="save-changes-button" type="button" hidden disabled>Save Changes</button>
+            <button class="tool-button" id="discard-changes-button" type="button" hidden disabled>Discard Changes</button>
+            <button class="tool-button" id="sign-out-button" type="button" hidden>Sign out</button>
+            <button class="tool-button" id="export-json-button" type="button">Download backup JSON</button>
             <button class="tool-button" id="import-json-button" type="button">Import JSON</button>
-            <button class="tool-button reset" id="reset-roadmap-button" type="button">Reset</button>
             <input id="import-json-input" type="file" accept="application/json,.json" hidden>
           </div>
         </div>
@@ -410,8 +417,76 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
     </form>
   </dialog>
 
+
+  <dialog class="editor-dialog auth-dialog" id="roadmap-auth-dialog" aria-labelledby="roadmap-auth-title">
+    <form id="roadmap-auth-form">
+      <div class="dialog-head">
+        <div><div class="eyebrow">AVANI editor access</div><h2 id="roadmap-auth-title">Sign in to edit</h2><p>Use your Avani Reporting Platform account. Only @avanimedia.com users can save.</p></div>
+        <button class="icon-button" type="button" id="roadmap-auth-close" aria-label="Close sign in">×</button>
+      </div>
+      <div class="form-grid">
+        <label class="span-2"><span>Avani email</span><input name="email" type="email" autocomplete="username" placeholder="name@avanimedia.com" required></label>
+        <label class="span-2"><span>Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+      </div>
+      <div class="auth-error" id="roadmap-auth-error" role="alert" hidden></div>
+      <div class="dialog-actions">
+        <span class="dialog-spacer"></span>
+        <button class="secondary-button" type="button" id="roadmap-auth-cancel">Cancel</button>
+        <button class="primary-button" type="submit">Sign in & Edit</button>
+      </div>
+    </form>
+  </dialog>
+
   <div class="feedback-region" id="feedback-region" role="status" aria-live="polite"></div>
   <script>
+(function(root, factory){
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.RoadmapPersistence = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function(){
+  function normalizeBase(url){ return String(url || '').replace(/\/+$/, ''); }
+  function encode(v){ return encodeURIComponent(String(v)); }
+  function commonHeaders(config, bearer){
+    return {
+      apikey: config.key,
+      Authorization: `Bearer ${bearer || config.key}`,
+      'Content-Type': 'application/json'
+    };
+  }
+  function buildRoadmapReadRequest(config){
+    const base = normalizeBase(config.url);
+    return {
+      url: `${base}/rest/v1/${config.table}?id=eq.${encode(config.rowId)}&select=id,data,version,updated_at`,
+      options: { method:'GET', headers: commonHeaders(config) }
+    };
+  }
+  function buildRoadmapSaveRequest(config, token, version, data){
+    const base = normalizeBase(config.url);
+    const headers = commonHeaders(config, token);
+    headers.Prefer = 'return=representation';
+    return {
+      url: `${base}/rest/v1/${config.table}?id=eq.${encode(config.rowId)}&version=eq.${encode(version)}&select=id,data,version,updated_at`,
+      options: { method:'PATCH', headers, body: JSON.stringify({data}) }
+    };
+  }
+  function buildPasswordSignInRequest(config, email, password){
+    const base = normalizeBase(config.url);
+    return {
+      url: `${base}/auth/v1/token?grant_type=password`,
+      options: { method:'POST', headers: commonHeaders(config), body: JSON.stringify({email, password}) }
+    };
+  }
+  function isAllowedEditorEmail(email){
+    return typeof email === 'string' && /^[^@\s]+@avanimedia\.com$/i.test(email.trim());
+  }
+  function parseRoadmapRow(rows){
+    if (!Array.isArray(rows) || !rows.length) return null;
+    const row = rows[0] || {};
+    return { data: row.data, version: Number(row.version || 0), updatedAt: row.updated_at || null, id: row.id || 'main' };
+  }
+  return { buildRoadmapReadRequest, buildRoadmapSaveRequest, buildPasswordSignInRequest, isAllowedEditorEmail, parseRoadmapRow };
+});
+
 const DEFAULT_STATUS_ORDER = ['Completed', 'Live', 'In Progress', 'Planned', 'Future'];
 const DEFAULT_WORK_TYPES = ['Foundation', 'Feature', 'Data Logic', 'Intelligence', 'UX', 'QA', 'Publishing', 'Automation', 'Reliability', 'Fix / Stabilization'];
 const DEFAULT_STUDIOS = ['syndication', 'scale'];
@@ -736,6 +811,13 @@ function packTimelineGroups(groups) {
 
 const STORAGE_KEY = 'avani-report-builder-roadmap-draft-v4';
 const DATA_URL = document.body?.dataset?.roadmapSrc || 'roadmap-data.json';
+const SESSION_KEY = 'avani-roadmap-editor-session-v1';
+const PERSISTENCE_CONFIG = {
+  url: document.body?.dataset?.supabaseUrl || '',
+  key: document.body?.dataset?.supabaseKey || '',
+  table: document.body?.dataset?.supabaseTable || 'report_builder_roadmap',
+  rowId: document.body?.dataset?.supabaseRow || 'main'
+};
 const filters = { studio: 'syndication', status: 'all', query: '' };
 let editMode = false;
 let selectedGroupId = '';
@@ -744,6 +826,13 @@ let publishedRoadmap = null;
 let roadmap = null;
 let unlockHistory = false;
 let draggedMilestoneId = '';
+let serverVersion = 0;
+let serverUpdatedAt = '';
+let persistenceAvailable = false;
+let dirty = false;
+let saveConflict = false;
+let authSession = null;
+let needsBootstrap = false;
 
 async function fetchPublishedRoadmap() {
   const response = await fetch(DATA_URL, { cache: 'no-store' });
@@ -752,6 +841,190 @@ async function fetchPublishedRoadmap() {
   const result = validateRoadmap(parsed);
   if (!result.valid) throw new Error(result.error);
   return scopeRoadmapToReportBuilder(parsed);
+}
+
+async function fetchServerRoadmap() {
+  if (!globalThis.RoadmapPersistence) throw new Error('Roadmap persistence client is unavailable.');
+  const request = RoadmapPersistence.buildRoadmapReadRequest(PERSISTENCE_CONFIG);
+  const response = await fetch(request.url, { ...request.options, cache: 'no-store' });
+  if (!response.ok) throw new Error(`Roadmap storage returned ${response.status}.`);
+  const row = RoadmapPersistence.parseRoadmapRow(await response.json());
+  if (!row) throw new Error('Roadmap storage row is missing.');
+  serverVersion = row.version;
+  serverUpdatedAt = row.updatedAt || '';
+  persistenceAvailable = true;
+  if (row.data?.bootstrap === true) {
+    needsBootstrap = true;
+    return null;
+  }
+  needsBootstrap = false;
+  const parsed = normalizeRoadmapData(row.data);
+  const result = validateRoadmap(parsed);
+  if (!result.valid) throw new Error(`Stored roadmap is invalid: ${result.error}`);
+  return scopeRoadmapToReportBuilder(parsed);
+}
+
+function restoreEditorSession() {
+  try {
+    const parsed = JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null');
+    if (!parsed?.accessToken || !RoadmapPersistence.isAllowedEditorEmail(parsed.email)) return null;
+    if (parsed.expiresAt && Date.now() >= parsed.expiresAt) return null;
+    return parsed;
+  } catch { return null; }
+}
+
+function storeEditorSession(session) {
+  authSession = session;
+  try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(session)); } catch { /* storage can be unavailable */ }
+}
+
+function clearEditorSession() {
+  authSession = null;
+  try { sessionStorage.removeItem(SESSION_KEY); } catch { /* storage can be unavailable */ }
+}
+
+function updatePersistenceUi() {
+  const status = document.querySelector('#server-status');
+  if (status) {
+    status.classList.toggle('is-live', persistenceAvailable && !dirty && !saveConflict);
+    status.classList.toggle('is-dirty', dirty && !saveConflict);
+    status.classList.toggle('is-error', !persistenceAvailable || saveConflict);
+    if (!persistenceAvailable) status.textContent = 'Read-only fallback: live roadmap storage is unavailable.';
+    else if (saveConflict) status.textContent = 'Save blocked: a newer roadmap version exists. Discard changes to reload it, or download a backup first.';
+    else if (dirty) status.textContent = `Unsaved changes${authSession?.email ? ` · ${authSession.email}` : ''}. Click Save Changes when ready.`;
+    else if (needsBootstrap) status.textContent = `Live roadmap storage connected · first authenticated save will initialize the live roadmap${authSession?.email ? ` · signed in as ${authSession.email}` : ''}.`;
+    else status.textContent = `Live roadmap storage connected${serverUpdatedAt ? ` · last saved ${formatUpdateDate(serverUpdatedAt)}` : ''}${authSession?.email ? ` · signed in as ${authSession.email}` : ''}.`;
+  }
+  const saveButton = document.querySelector('#save-changes-button');
+  const discardButton = document.querySelector('#discard-changes-button');
+  const signOutButton = document.querySelector('#sign-out-button');
+  if (saveButton) {
+    saveButton.hidden = !editMode;
+    saveButton.disabled = (!dirty && !needsBootstrap) || !authSession || !persistenceAvailable || saveConflict;
+  }
+  if (discardButton) {
+    discardButton.hidden = !editMode;
+    discardButton.disabled = !dirty && !saveConflict;
+  }
+  if (signOutButton) signOutButton.hidden = !authSession;
+}
+
+function openAuthDialog() {
+  const dialog = document.querySelector('#roadmap-auth-dialog');
+  const error = document.querySelector('#roadmap-auth-error');
+  if (error) { error.hidden = true; error.textContent = ''; }
+  if (dialog && !dialog.open) dialog.showModal();
+}
+
+function closeAuthDialog() {
+  const dialog = document.querySelector('#roadmap-auth-dialog');
+  if (dialog?.open) dialog.close();
+}
+
+async function signInEditor() {
+  const form = document.querySelector('#roadmap-auth-form');
+  const error = document.querySelector('#roadmap-auth-error');
+  const values = Object.fromEntries(new FormData(form));
+  const email = String(values.email || '').trim().toLowerCase();
+  if (!RoadmapPersistence.isAllowedEditorEmail(email)) {
+    error.textContent = 'Use an @avanimedia.com account.';
+    error.hidden = false;
+    return;
+  }
+  try {
+    const request = RoadmapPersistence.buildPasswordSignInRequest(PERSISTENCE_CONFIG, email, String(values.password || ''));
+    const response = await fetch(request.url, request.options);
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(payload?.msg || payload?.error_description || payload?.error || 'Sign in failed.');
+    const userEmail = payload?.user?.email || email;
+    if (!RoadmapPersistence.isAllowedEditorEmail(userEmail)) throw new Error('This account is not allowed to edit the roadmap.');
+    storeEditorSession({
+      accessToken: payload.access_token,
+      email: userEmail,
+      expiresAt: payload.expires_in ? Date.now() + Number(payload.expires_in) * 1000 : 0
+    });
+    form.reset();
+    closeAuthDialog();
+    setEditMode(true);
+    notify('Signed in. You can now edit and save the live roadmap.');
+  } catch (err) {
+    error.textContent = err.message || 'Sign in failed.';
+    error.hidden = false;
+  }
+}
+
+function requestEditMode() {
+  if (editMode) { setEditMode(false); return; }
+  if (!persistenceAvailable) {
+    notify('Live storage is unavailable, so persistent editing is temporarily disabled.', 'error');
+    return;
+  }
+  if (!authSession) { openAuthDialog(); return; }
+  setEditMode(true);
+}
+
+async function saveChangesToServer() {
+  if (!authSession) { openAuthDialog(); return; }
+  if ((!dirty && !needsBootstrap) || saveConflict) return;
+  try {
+    const request = RoadmapPersistence.buildRoadmapSaveRequest(PERSISTENCE_CONFIG, authSession.accessToken, serverVersion, roadmap);
+    const response = await fetch(request.url, request.options);
+    if (response.status === 401 || response.status === 403) {
+      clearEditorSession();
+      updatePersistenceUi();
+      throw new Error('Your editor session expired. Sign in again to save.');
+    }
+    if (!response.ok) throw new Error(`Save failed (${response.status}).`);
+    const rows = await response.json();
+    const row = RoadmapPersistence.parseRoadmapRow(rows);
+    if (!row) {
+      saveConflict = true;
+      updatePersistenceUi();
+      notify('A newer roadmap version was saved by someone else. Reload it before saving over it.', 'error');
+      return;
+    }
+    const parsed = normalizeRoadmapData(row.data);
+    const result = validateRoadmap(parsed);
+    if (!result.valid) throw new Error(`Saved roadmap failed validation: ${result.error}`);
+    serverVersion = row.version;
+    serverUpdatedAt = row.updatedAt || '';
+    publishedRoadmap = scopeRoadmapToReportBuilder(parsed);
+    roadmap = structuredClone(publishedRoadmap);
+    dirty = false;
+    saveConflict = false;
+    needsBootstrap = false;
+    try { localStorage.removeItem(STORAGE_KEY); } catch { /* storage can be unavailable */ }
+    populateEditorOptions();
+    render();
+    notify('Roadmap saved. Everyone opening this URL will now see these changes.');
+  } catch (err) {
+    notify(err.message || 'Could not save roadmap.', 'error');
+  }
+}
+
+async function discardUnsavedChanges() {
+  if ((dirty || saveConflict) && !confirm('Discard your unsaved roadmap changes and reload the latest saved version?')) return;
+  try {
+    const serverRoadmap = await fetchServerRoadmap();
+    const fresh = serverRoadmap || await fetchPublishedRoadmap();
+    publishedRoadmap = structuredClone(fresh);
+    roadmap = structuredClone(fresh);
+    dirty = false;
+    saveConflict = false;
+    try { localStorage.removeItem(STORAGE_KEY); } catch { /* storage can be unavailable */ }
+    populateEditorOptions();
+    render();
+    notify('Latest saved roadmap reloaded.');
+  } catch (err) {
+    notify(`Could not reload roadmap: ${err.message}`, 'error');
+  }
+}
+
+function signOutEditor() {
+  clearEditorSession();
+  setEditMode(false);
+  updatePersistenceUi();
+  notify('Signed out of roadmap editing.');
 }
 
 function loadLocalDraft(base) {
@@ -840,6 +1113,7 @@ function saveRoadmap(data) {
 function persistAndRender(data) {
   data.updatedAt = new Date().toISOString();
   saveRoadmap(data);
+  dirty = true;
   render();
 }
 
@@ -1094,6 +1368,7 @@ function render() {
   renderTrack('syndication');
   renderTrack('scale');
   renderOpenGroupDialog();
+  updatePersistenceUi();
 }
 
 function setStudioFilter(studio) {
@@ -1227,7 +1502,8 @@ async function importJsonFile(file) {
     saveRoadmap(copy);
     populateEditorOptions();
     render();
-    notify('Roadmap JSON imported as a local draft. Download roadmap-data.json to publish it.');
+    dirty = true;
+    notify('Roadmap JSON imported. Review it, then click Save Changes to publish.');
   } catch (error) {
     notify(`Import failed: ${error.message}`, 'error');
   } finally {
@@ -1235,20 +1511,6 @@ async function importJsonFile(file) {
   }
 }
 
-function resetRoadmap() {
-  if (!confirm('Reset this browser draft to the currently published roadmap-data.json? Local edits will be removed unless you downloaded them.')) return;
-  roadmap = structuredClone(publishedRoadmap);
-  try { localStorage.removeItem(STORAGE_KEY); } catch { /* storage can be unavailable */ }
-  filters.studio = 'syndication';
-  filters.status = 'all';
-  filters.query = '';
-  populateEditorOptions();
-  document.querySelector('#status-filter').value = 'all';
-  document.querySelector('#search-input').value = '';
-  closeGroupDialog();
-  setStudioFilter('syndication');
-  notify('Roadmap reset to the currently published roadmap-data.json.');
-}
 
 function bindEvents() {
   document.querySelectorAll('[data-studio-filter]').forEach((button) => {
@@ -1262,11 +1524,16 @@ function bindEvents() {
     filters.query = event.target.value;
     render();
   });
-  document.querySelector('#edit-roadmap-button').addEventListener('click', () => setEditMode(!editMode));
+  document.querySelector('#edit-roadmap-button').addEventListener('click', requestEditMode);
   document.querySelector('#export-json-button').addEventListener('click', downloadJson);
   document.querySelector('#import-json-button').addEventListener('click', () => document.querySelector('#import-json-input').click());
   document.querySelector('#import-json-input').addEventListener('change', (event) => importJsonFile(event.target.files?.[0]));
-  document.querySelector('#reset-roadmap-button').addEventListener('click', resetRoadmap);
+  document.querySelector('#save-changes-button').addEventListener('click', saveChangesToServer);
+  document.querySelector('#discard-changes-button').addEventListener('click', discardUnsavedChanges);
+  document.querySelector('#sign-out-button').addEventListener('click', signOutEditor);
+  document.querySelector('#roadmap-auth-form').addEventListener('submit', (event) => { event.preventDefault(); signInEditor(); });
+  document.querySelector('#roadmap-auth-close').addEventListener('click', closeAuthDialog);
+  document.querySelector('#roadmap-auth-cancel').addEventListener('click', closeAuthDialog);
   document.querySelector('#add-milestone-button').addEventListener('click', () => openEditor());
   document.querySelector('#dialog-close-button').addEventListener('click', closeEditor);
   document.querySelector('#cancel-editor-button').addEventListener('click', closeEditor);
@@ -1375,6 +1642,13 @@ function bindEvents() {
     event.preventDefault();
     closeGroupDialog();
   });
+  document.querySelector('#roadmap-auth-dialog').addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) closeAuthDialog();
+  });
+  document.querySelector('#roadmap-auth-dialog').addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeAuthDialog();
+  });
 }
 
 function showLoadError(error) {
@@ -1388,19 +1662,30 @@ function showLoadError(error) {
 
 async function initializeRoadmap() {
   try {
-    publishedRoadmap = await fetchPublishedRoadmap();
-    roadmap = loadLocalDraft(publishedRoadmap);
+    authSession = restoreEditorSession();
+    let initialRoadmap = null;
+    let serverError = null;
+    try {
+      initialRoadmap = await fetchServerRoadmap();
+    } catch (error) {
+      persistenceAvailable = false;
+      serverError = error;
+    }
+    if (!initialRoadmap) initialRoadmap = await fetchPublishedRoadmap();
+    publishedRoadmap = structuredClone(initialRoadmap);
+    roadmap = structuredClone(initialRoadmap);
+    dirty = false;
     applyPageMetadata();
     populateEditorOptions();
     bindEvents();
     render();
+    if (serverError) notify('Live editing storage is temporarily unavailable; the roadmap is in read-only fallback mode.', 'error');
   } catch (error) {
     showLoadError(error);
   }
 }
 
 globalThis.__roadmapReady = initializeRoadmap();
-
   </script>
 </body>
 </html>
