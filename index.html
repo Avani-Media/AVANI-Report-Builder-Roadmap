@@ -110,8 +110,8 @@ button{color:inherit}
 
 .timeline-board{position:relative;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;box-shadow:var(--soft)}
 .timeline-scroll{overflow-x:auto;overscroll-behavior-inline:contain}
-.timeline-inner{min-width:920px}
-.timeline-header-grid{display:grid;grid-template-columns:var(--label-width) repeat(4,minmax(0,1fr));background:#f8fbff;border-bottom:1px solid var(--line)}
+.timeline-inner{min-width:1180px}
+.timeline-header-grid{display:grid;grid-template-columns:var(--label-width) repeat(6,minmax(0,1fr));background:#f8fbff;border-bottom:1px solid var(--line)}
 .timeline-label-head{display:flex;align-items:center;padding:11px 14px;font-size:8.5px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;color:#8090a8;border-right:1px solid var(--line)}
 .quarter-head{position:relative;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-right:1px solid var(--line);font-size:9px;font-weight:950;color:#62748e;text-transform:uppercase;letter-spacing:.08em}
 .quarter-head:last-child{border-right:0}
@@ -122,13 +122,7 @@ button{color:inherit}
 .lane-label{display:flex;flex-direction:column;justify-content:center;gap:3px;min-height:78px;padding:12px 14px;border-right:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)}
 .lane-label strong{font-size:11px;line-height:1.25;color:#243754;letter-spacing:-.01em}
 .lane-label span{font-size:8.5px;line-height:1.38;color:#8795aa}
-.lane-bars{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:34px;gap:6px 0;padding:8px 7px;min-height:78px;background:
-  linear-gradient(to right,
-    transparent 0%, transparent calc(25% - .5px), var(--line) calc(25% - .5px), var(--line) calc(25% + .5px),
-    transparent calc(25% + .5px), transparent calc(50% - .5px), var(--line) calc(50% - .5px), var(--line) calc(50% + .5px),
-    transparent calc(50% + .5px), transparent calc(75% - .5px), var(--line) calc(75% - .5px), var(--line) calc(75% + .5px),
-    transparent calc(75% + .5px));
-}
+.lane-bars{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:34px;gap:6px 0;padding:8px 7px;min-height:78px;background-image:linear-gradient(to right,transparent calc(100% - 1px),var(--line) calc(100% - 1px));background-size:16.6666667% 100%}
 .timeline-bar{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;height:34px;margin:0 4px;border:0;border-radius:9px;padding:0 10px;color:#fff;cursor:pointer;box-shadow:0 6px 16px rgba(21,52,100,.12);transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;text-align:left;overflow:hidden}
 .timeline-bar:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(21,52,100,.17);filter:saturate(1.04)}
 .timeline-bar[data-status="Completed"]{background:linear-gradient(135deg,#14935f,#22ad78)}
@@ -142,6 +136,24 @@ button{color:inherit}
 .timeline-bar[data-status="Future"] .bar-count{background:#edf2f8;color:#64748c}
 .timeline-bar .bar-period{font-size:7.5px;font-weight:800;opacity:.82;white-space:nowrap;flex:0 0 auto}
 .timeline-empty{grid-column:1 / -1;padding:28px;color:var(--muted);font-size:10px;text-align:center;border:1px dashed #cdd8e7;border-radius:14px;margin:8px;background:#fbfdff}
+
+/* Edit mode — month planning board */
+.planning-mode-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:10px;padding:12px 14px;border:1px solid #dce6f3;border-radius:15px;background:linear-gradient(135deg,#f9fbff 0%,#f0f6ff 100%)}
+.planning-mode-head>div{display:grid;gap:2px}.planning-mode-head .eyebrow{margin:0;font-size:7.5px}.planning-mode-head strong{font-size:11px;color:#223755}.planning-mode-head small{font-size:8.5px;color:#7d8ea5}
+.history-unlock{display:flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid #d5e1f0;border-radius:10px;background:#fff;color:#60738e;font-size:8.5px;font-weight:800;white-space:nowrap;cursor:pointer}.history-unlock input{accent-color:var(--blue)}
+.planning-board-scroll{overflow-x:auto;overscroll-behavior-inline:contain;padding-bottom:4px}
+.planning-board{display:grid;grid-template-columns:repeat(6,minmax(205px,1fr));gap:8px;min-width:1260px;align-items:start}
+.planning-column{min-width:0;border:1px solid #dce5f0;border-radius:14px;background:#f8fbff;overflow:hidden;transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}
+.planning-column.backlog{background:#fbfaff;border-style:dashed}
+.planning-column.is-drop-target,.planning-dropzone.is-drop-target{border-color:#6e9df3;background:#edf4ff;box-shadow:inset 0 0 0 2px rgba(51,112,232,.08)}
+.planning-column-head{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:9px 10px;border-bottom:1px solid #dfe7f2;background:#fff}.planning-column-head>div{display:grid;gap:2px}.planning-column-head strong{font-size:9.5px;color:#2a3f5e}.planning-column-head span{font-size:7.5px;color:#8b99ad}.add-inline-button{border:1px solid #d7e2f1;border-radius:8px;background:#f5f8fd;color:#3368cf;padding:5px 7px;font-size:8px;font-weight:900;cursor:pointer}.add-inline-button:hover{background:#edf3ff}
+.planning-dropzone{display:grid;gap:7px;min-height:180px;padding:8px;transition:background .15s ease}
+.planning-card{display:grid;gap:6px;padding:9px 9px 8px;border:1px solid #dce5f0;border-radius:11px;background:#fff;box-shadow:0 4px 12px rgba(16,38,80,.045);transition:transform .14s ease,box-shadow .14s ease,opacity .14s ease,border-color .14s ease}
+.planning-card[draggable="true"]{cursor:grab}.planning-card[draggable="true"]:active{cursor:grabbing}.planning-card:hover{border-color:#c6d6eb;box-shadow:0 7px 17px rgba(16,38,80,.075)}.planning-card.is-dragging{opacity:.38;transform:scale(.98)}.planning-card.is-locked{background:#fbfcfe;border-style:dashed;box-shadow:none}
+.planning-card-top{display:flex;align-items:center;justify-content:space-between;gap:6px}.drag-handle{color:#8fa0b7;font-size:13px;font-weight:900;letter-spacing:-2px}.planning-lock{padding:4px 5px;border-radius:999px;background:#f0f3f7;color:#8290a3;font-size:6.8px;font-weight:950;letter-spacing:.05em;text-transform:uppercase}
+.planning-card>strong{font-size:9.5px;line-height:1.3;color:#263b58}.planning-category{font-size:7.7px;line-height:1.35;color:#8795aa}
+.planning-card-controls{display:flex;align-items:center;gap:5px;padding-top:2px}.planning-card-controls label{min-width:0;flex:1}.planning-card-controls select{width:100%;height:28px;border:1px solid #dce5f0;border-radius:8px;background:#f9fbfe;color:#536680;padding:0 6px;font-size:7.8px;font-weight:800;outline:none}.planning-card-controls select:focus{border-color:#8bb0f3;box-shadow:0 0 0 2px rgba(51,112,232,.08)}.planning-edit-button{height:28px;border:1px solid #dce5f0;border-radius:8px;background:#fff;color:#426aa9;padding:0 7px;font-size:7.8px;font-weight:900;cursor:pointer}.planning-edit-button:hover{background:#f2f6fd}
+.planning-empty{display:grid;place-items:center;min-height:70px;border:1px dashed #cad6e6;border-radius:9px;color:#9aa7b9;font-size:8px;background:rgba(255,255,255,.55)}
 
 
 .studio-product-label{margin-bottom:3px;font-size:7.5px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#7d8ea7}
@@ -299,11 +311,11 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
       <details class="manage-panel" id="manage-roadmap-panel">
         <summary>
           <span class="manage-icon">⚙</span>
-          <span><strong>Manage Roadmap</strong><small>Edit milestones, add new work, or export a backup.</small></span>
+          <span><strong>Manage Roadmap</strong><small>Add work, drag it into a month, edit details, or publish the JSON.</small></span>
           <span class="summary-chevron">⌄</span>
         </summary>
         <div class="manage-body">
-          <div class="manage-note">Changes save in this browser as a draft. Download roadmap-data.json and replace the root GitHub file when you want to publish.</div>
+          <div class="manage-note">Edit Roadmap opens the month-planning workspace. New work starts Unscheduled; drag it into a month when timing is decided. Changes stay in this browser until you download roadmap-data.json and replace the root GitHub file.</div>
           <div class="editor-actions">
             <button class="tool-button" id="edit-roadmap-button" type="button">Edit Roadmap</button>
             <button class="tool-button primary" id="add-milestone-button" type="button" hidden>+ Add milestone</button>
@@ -375,12 +387,20 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
         <label class="span-2"><span>Category / capability</span><input name="category" list="category-suggestions" required placeholder="e.g. Data & Campaign Configuration"></label>
         <label class="span-2"><span>Milestone title</span><input name="title" required placeholder="Short, clear roadmap item"></label>
         <label class="span-2"><span>Description</span><textarea name="description" rows="4" placeholder="What was built or what is planned"></textarea></label>
-        <label><span>Roadmap window</span><input name="period" placeholder="e.g. Aug 2026, Sep 2026, Next, Future"></label>
+        <label><span>Roadmap month</span><input name="period" list="period-suggestions" placeholder="e.g. October 2026 or Unscheduled"></label>
         <label><span>Tags</span><input name="tags" placeholder="Comma-separated tags"></label>
         <label class="span-2"><span>Why it mattered</span><textarea name="why" rows="3" placeholder="Optional impact or rationale"></textarea></label>
         <label class="span-2"><span>Notes</span><textarea name="notes" rows="3" placeholder="Optional internal roadmap note"></textarea></label>
       </div>
       <datalist id="category-suggestions"></datalist>
+      <datalist id="period-suggestions">
+        <option value="August 2026"></option>
+        <option value="September 2026"></option>
+        <option value="October 2026"></option>
+        <option value="November 2026"></option>
+        <option value="December 2026"></option>
+        <option value="Unscheduled"></option>
+      </datalist>
       <div class="dialog-actions">
         <button class="danger-button" type="button" id="delete-milestone-button" hidden>Delete milestone</button>
         <span class="dialog-spacer"></span>
@@ -396,6 +416,14 @@ const DEFAULT_STATUS_ORDER = ['Completed', 'Live', 'In Progress', 'Planned', 'Fu
 const DEFAULT_WORK_TYPES = ['Foundation', 'Feature', 'Data Logic', 'Intelligence', 'UX', 'QA', 'Publishing', 'Automation', 'Reliability', 'Fix / Stabilization'];
 const DEFAULT_STUDIOS = ['syndication', 'scale'];
 const REQUIRED_KEYS = ['id', 'studio', 'category', 'title', 'description', 'status', 'period', 'workType', 'why', 'notes', 'tags', 'order'];
+const PLANNING_COLUMNS = [
+  { key: 'aug', label: 'August 2026' },
+  { key: 'sep', label: 'September 2026' },
+  { key: 'oct', label: 'October 2026' },
+  { key: 'nov', label: 'November 2026' },
+  { key: 'dec', label: 'December 2026' },
+  { key: 'unscheduled', label: 'Unscheduled' }
+];
 
 function statusOrderFor(data) {
   return Array.isArray(data?.statusOrder) && data.statusOrder.length ? data.statusOrder : DEFAULT_STATUS_ORDER;
@@ -435,6 +463,7 @@ function validateRoadmap(data) {
     if (typeof item.description !== 'string') return { valid: false, error: 'Milestone description must be text.' };
     if (!Array.isArray(item.tags)) return { valid: false, error: 'Milestone tags must be an array.' };
     if (!Number.isFinite(item.order)) return { valid: false, error: 'Milestone order must be numeric.' };
+    if ('planOrder' in item && !Number.isFinite(item.planOrder)) return { valid: false, error: 'Milestone planOrder must be numeric when provided.' };
   }
   return { valid: true, error: '' };
 }
@@ -454,9 +483,10 @@ function normalizeRoadmapData(data, baseline = null) {
     copy.workTypes = Array.isArray(copy.workTypes) ? copy.workTypes : [...DEFAULT_WORK_TYPES];
   }
   if (Array.isArray(copy.milestones)) {
-    copy.milestones = copy.milestones.map((item) => ({
+    copy.milestones = copy.milestones.map((item, index) => ({
       ...item,
-      workType: item?.workType ? item.workType : 'Feature'
+      workType: item?.workType ? item.workType : 'Feature',
+      planOrder: Number.isFinite(item?.planOrder) ? item.planOrder : index + 1
     }));
   }
   return copy;
@@ -557,38 +587,95 @@ function getRoadmapStage(status) {
   return 'Next / Future';
 }
 
+function getPlanningColumns() {
+  return structuredClone(PLANNING_COLUMNS);
+}
+
 function getTimelineWindow(period, status = '') {
   const value = String(period || '').trim();
   const normalized = value.toLowerCase().replace(/–/g, '-').replace(/—/g, '-');
 
-  if (normalized === 'future') return { key: 'future', start: 4, span: 1, label: 'Future' };
-  if (normalized === 'next') return { key: 'next', start: 3, span: 1, label: 'Next' };
-  if (normalized === 'ongoing') return { key: 'sep-next', start: 2, span: 2, label: 'September → Next' };
+  if (normalized === 'future' || normalized === 'next' || normalized === 'unscheduled') {
+    return { key: 'unscheduled', start: 6, span: 1, label: 'Unscheduled' };
+  }
+  if (normalized === 'ongoing') return { key: 'sep-oct', start: 2, span: 2, label: 'September → October' };
 
   const explicitQuarter = normalized.match(/\bq([1-4])\b(?:\s*(20\d{2}))?/);
   if (explicitQuarter) {
     const quarter = Number(explicitQuarter[1]);
     const year = explicitQuarter[2] ? Number(explicitQuarter[2]) : 2026;
-    if (year > 2026) return { key: 'future', start: 4, span: 1, label: 'Future' };
-    if (quarter === 4) return { key: 'next', start: 3, span: 1, label: 'Next' };
+    if (year > 2026) return { key: 'unscheduled', start: 6, span: 1, label: 'Unscheduled' };
+    if (quarter === 4) return { key: 'oct-dec', start: 3, span: 3, label: 'Oct–Dec 2026' };
     return { key: 'aug-sep', start: 1, span: 2, label: 'Aug–Sep 2026' };
   }
 
   const hasAugust = /\b(aug|august)\b/.test(normalized);
   const hasSeptember = /\b(sep|sept|september)\b/.test(normalized);
+  const hasOctober = /\b(oct|october)\b/.test(normalized);
+  const hasNovember = /\b(nov|november)\b/.test(normalized);
+  const hasDecember = /\b(dec|december)\b/.test(normalized);
   if (hasAugust && hasSeptember) return { key: 'aug-sep', start: 1, span: 2, label: 'Aug–Sep 2026' };
   if (hasAugust) return { key: 'aug', start: 1, span: 1, label: 'August 2026' };
-  if (hasSeptember && status === 'In Progress') return { key: 'sep-next', start: 2, span: 2, label: 'September → Next' };
+  if (hasSeptember && hasOctober) return { key: 'sep-oct', start: 2, span: 2, label: 'September → October' };
   if (hasSeptember) return { key: 'sep', start: 2, span: 1, label: 'September 2026' };
-  if (/\b(oct|nov|dec|october|november|december)\b/.test(normalized)) {
-    return { key: 'next', start: 3, span: 1, label: 'Next' };
-  }
+  if (hasOctober) return { key: 'oct', start: 3, span: 1, label: 'October 2026' };
+  if (hasNovember) return { key: 'nov', start: 4, span: 1, label: 'November 2026' };
+  if (hasDecember) return { key: 'dec', start: 5, span: 1, label: 'December 2026' };
 
   if (normalized === '2026') return { key: 'aug-sep', start: 1, span: 2, label: 'Aug–Sep 2026' };
-  if (status === 'Future') return { key: 'future', start: 4, span: 1, label: 'Future' };
-  if (status === 'Planned') return { key: 'next', start: 3, span: 1, label: 'Next' };
-  if (status === 'In Progress') return { key: 'sep-next', start: 2, span: 2, label: 'September → Next' };
+  if (status === 'Future' || status === 'Planned') return { key: 'unscheduled', start: 6, span: 1, label: 'Unscheduled' };
+  if (status === 'In Progress') return { key: 'sep-oct', start: 2, span: 2, label: 'September → October' };
   return { key: 'aug-sep', start: 1, span: 2, label: 'Aug–Sep 2026' };
+}
+
+function getPlanningPeriodLabel(period, status = '') {
+  const window = getTimelineWindow(period, status);
+  if (window.key === 'aug-sep') return 'September 2026';
+  if (window.key === 'sep-oct') return 'October 2026';
+  if (window.key === 'oct-dec') return 'October 2026';
+  return window.label;
+}
+
+function moveMilestoneToPeriod(data, id, period) {
+  const copy = structuredClone(data);
+  const item = copy.milestones.find((milestone) => milestone.id === id);
+  if (!item) return copy;
+  const targetLabel = getPlanningPeriodLabel(period, item.status);
+  const targetColumn = PLANNING_COLUMNS.find((column) => column.label === targetLabel);
+  if (!targetColumn) return copy;
+  const siblings = copy.milestones.filter((milestone) => (
+    milestone.id !== id
+    && milestone.studio === item.studio
+    && getPlanningPeriodLabel(milestone.period, milestone.status) === targetLabel
+  ));
+  const maxPlanOrder = siblings.reduce((max, sibling) => Math.max(max, Number.isFinite(sibling.planOrder) ? sibling.planOrder : 0), 0);
+  item.period = targetLabel;
+  item.planOrder = maxPlanOrder + 1;
+  return copy;
+}
+
+function reorderMilestoneInPeriod(data, sourceId, targetId) {
+  const copy = structuredClone(data);
+  const source = copy.milestones.find((item) => item.id === sourceId);
+  const target = copy.milestones.find((item) => item.id === targetId);
+  if (!source || !target || source.studio !== target.studio) return copy;
+  const sourcePeriod = getPlanningPeriodLabel(source.period, source.status);
+  const targetPeriod = getPlanningPeriodLabel(target.period, target.status);
+  if (sourcePeriod !== targetPeriod) return copy;
+  const siblings = copy.milestones
+    .filter((item) => item.studio === source.studio && getPlanningPeriodLabel(item.period, item.status) === sourcePeriod)
+    .sort((a, b) => (a.planOrder ?? a.order ?? 0) - (b.planOrder ?? b.order ?? 0));
+  const sourceIndex = siblings.findIndex((item) => item.id === sourceId);
+  const targetIndex = siblings.findIndex((item) => item.id === targetId);
+  if (sourceIndex < 0 || targetIndex < 0 || sourceIndex === targetIndex) return copy;
+  const [moved] = siblings.splice(sourceIndex, 1);
+  const adjustedTargetIndex = siblings.findIndex((item) => item.id === targetId);
+  siblings.splice(Math.max(0, adjustedTargetIndex), 0, moved);
+  siblings.forEach((item, index) => {
+    const original = copy.milestones.find((milestone) => milestone.id === item.id);
+    original.planOrder = index + 1;
+  });
+  return copy;
 }
 
 function getGroupStatus(items) {
@@ -655,6 +742,8 @@ let selectedGroupId = '';
 let selectedGroupStudio = '';
 let publishedRoadmap = null;
 let roadmap = null;
+let unlockHistory = false;
+let draggedMilestoneId = '';
 
 async function fetchPublishedRoadmap() {
   const response = await fetch(DATA_URL, { cache: 'no-store' });
@@ -789,7 +878,7 @@ function renderBuildSummary(studio) {
     <div class="build-summary-card start"><span>Official start</span><b>${escapeHtml(summary.officialStart)}</b><small>AVANI REPORT BUILDER™</small></div>
     <div class="build-summary-card"><span>Built / active</span><b>${summary.built}</b><small>Meaningful product changes</small></div>
     <div class="build-summary-card reliability"><span>Reliability / fixes</span><b>${summary.reliability}</b><small>QA, fixes & stabilization</small></div>
-    <div class="build-summary-card future"><span>Next / future</span><b>${summary.nextFuture}</b><small>Approved forward roadmap</small></div>`;
+    <div class="build-summary-card future"><span>Forward plan</span><b>${summary.nextFuture}</b><small>Planned or unscheduled work</small></div>`;
 }
 
 function currentTimelineColumn() {
@@ -797,20 +886,18 @@ function currentTimelineColumn() {
   const year = now.getFullYear();
   const month = now.getMonth() + 1;
   if (year < 2026 || (year === 2026 && month < 8)) return null;
-  if (year > 2026) return 4;
+  if (year > 2026) return 6;
   if (month === 8) return 1;
   if (month === 9) return 2;
-  return 3;
+  if (month === 10) return 3;
+  if (month === 11) return 4;
+  if (month === 12) return 5;
+  return 6;
 }
 
 function timelineHeader() {
   const current = currentTimelineColumn();
-  const columns = [
-    ['August 2026', 1],
-    ['September 2026', 2],
-    ['Next', 3],
-    ['Future', 4]
-  ];
+  const columns = getPlanningColumns().map((column, index) => [column.label, index + 1]);
   return `
     <div class="timeline-header-grid">
       <div class="timeline-label-head">Capability</div>
@@ -819,6 +906,9 @@ function timelineHeader() {
 }
 
 function groupTitle(group) {
+  if (['oct', 'nov', 'dec', 'unscheduled'].includes(group.window.key)) {
+    return getLaneMeta(group.studio, group.category)[0];
+  }
   return roadmap.barLabels?.[group.window.key] || group.window.label;
 }
 
@@ -861,6 +951,11 @@ function renderTrack(studio) {
   section.hidden = filters.studio !== 'all' && filters.studio !== studio;
   if (section.hidden) return;
 
+  if (editMode) {
+    renderPlanningBoard(studio, section);
+    return;
+  }
+
   const visible = getVisibleMilestones(studio);
   const groups = groupMilestonesForTimeline(visible);
   const container = section.querySelector(`[data-roadmap-container="${studio}"]`);
@@ -877,6 +972,59 @@ function renderTrack(studio) {
           ${lanes || '<div class="timeline-empty">No milestones match the current filters.</div>'}
         </div>
       </div>
+    </div>`;
+}
+
+function isProtectedHistory(item) {
+  const period = getPlanningPeriodLabel(item.period, item.status);
+  return ['August 2026', 'September 2026'].includes(period) && ['Completed', 'Live'].includes(item.status);
+}
+
+function renderPlanningCard(item) {
+  const locked = isProtectedHistory(item) && !unlockHistory;
+  const statusOptions = roadmap.statusOrder.map((status) => `<option value="${escapeHtml(status)}"${status === item.status ? ' selected' : ''}>${escapeHtml(status)}</option>`).join('');
+  return `
+    <article class="planning-card${locked ? ' is-locked' : ''}" data-plan-id="${escapeHtml(item.id)}" draggable="${locked ? 'false' : 'true'}">
+      <div class="planning-card-top">
+        <span class="work-type-pill" data-work-type="${escapeHtml(item.workType)}">${escapeHtml(item.workType)}</span>
+        ${locked ? '<span class="planning-lock" title="Completed history is locked by default">Locked</span>' : '<span class="drag-handle" aria-hidden="true">⋮⋮</span>'}
+      </div>
+      <strong>${escapeHtml(item.title)}</strong>
+      <span class="planning-category">${escapeHtml(getLaneMeta(item.studio, item.category)[0])}</span>
+      <div class="planning-card-controls">
+        <label><span class="sr-only">Status for ${escapeHtml(item.title)}</span><select data-planning-status="${escapeHtml(item.id)}">${statusOptions}</select></label>
+        <button class="planning-edit-button" type="button" data-edit-id="${escapeHtml(item.id)}" aria-label="Edit ${escapeHtml(item.title)}">Edit</button>
+      </div>
+    </article>`;
+}
+
+function renderPlanningBoard(studio, section) {
+  const container = section.querySelector(`[data-roadmap-container="${studio}"]`);
+  const columns = getPlanningColumns();
+  const visible = getVisibleMilestones(studio)
+    .slice()
+    .sort((a, b) => (a.planOrder ?? a.order ?? 0) - (b.planOrder ?? b.order ?? 0));
+  const boardColumns = columns.map((column) => {
+    const items = visible.filter((item) => getPlanningPeriodLabel(item.period, item.status) === column.label);
+    return `
+      <section class="planning-column${column.key === 'unscheduled' ? ' backlog' : ''}" data-planning-period="${escapeHtml(column.label)}">
+        <div class="planning-column-head">
+          <div><strong>${escapeHtml(column.label)}</strong><span>${items.length} ${items.length === 1 ? 'item' : 'items'}</span></div>
+          ${column.key === 'unscheduled' ? '<button type="button" class="add-inline-button" data-add-unscheduled>+ Add</button>' : ''}
+        </div>
+        <div class="planning-dropzone" data-planning-period="${escapeHtml(column.label)}">
+          ${items.map(renderPlanningCard).join('') || '<div class="planning-empty">Drop work here</div>'}
+        </div>
+      </section>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="planning-mode-head">
+      <div><span class="eyebrow">Planning workspace</span><strong>Drag work into the month you want it to run.</strong><small>Status stays separate from schedule.</small></div>
+      <label class="history-unlock"><input type="checkbox" data-unlock-history${unlockHistory ? ' checked' : ''}><span>Allow moving completed/live Aug/Sep history</span></label>
+    </div>
+    <div class="planning-board-scroll">
+      <div class="planning-board">${boardColumns}</div>
     </div>`;
 }
 
@@ -973,7 +1121,7 @@ function nextOrder(studio, category) {
   return siblings.length ? Math.max(...siblings.map((item) => item.order)) + 1 : 1;
 }
 
-function openEditor(id = '') {
+function openEditor(id = '', defaultPeriod = 'Unscheduled') {
   const dialog = document.querySelector('#milestone-dialog');
   const form = document.querySelector('#milestone-form');
   const item = id ? roadmap.milestones.find((milestone) => milestone.id === id) : null;
@@ -983,11 +1131,11 @@ function openEditor(id = '') {
   form.elements.status.value = item?.status || 'Planned';
   form.elements.workType.value = item?.workType || 'Feature';
   const categoryOptions = roadmap.studios?.[form.elements.studio.value]?.categoryOrder || [];
-  const defaultCategory = categoryOptions.find((category) => /next/i.test(category)) || categoryOptions.at(-1) || '';
+  const defaultCategory = categoryOptions.find((category) => /roadmap/i.test(category)) || categoryOptions.at(-1) || '';
   form.elements.category.value = item?.category || defaultCategory;
   form.elements.title.value = item?.title || '';
   form.elements.description.value = item?.description || '';
-  form.elements.period.value = item?.period || '';
+  form.elements.period.value = item?.period || defaultPeriod;
   form.elements.why.value = item?.why || '';
   form.elements.notes.value = item?.notes || '';
   form.elements.tags.value = item?.tags?.join(', ') || '';
@@ -1024,7 +1172,8 @@ function applyEditorForm() {
     why: values.why.trim(),
     notes: values.notes.trim(),
     tags,
-    order: targetOrder
+    order: targetOrder,
+    planOrder: Number.isFinite(existing?.planOrder) ? existing.planOrder : roadmap.milestones.length + 1
   };
   if (existingIndex >= 0) copy.milestones[existingIndex] = item;
   else copy.milestones.push(item);
@@ -1130,6 +1279,10 @@ function bindEvents() {
     deleteMilestone(document.querySelector('#milestone-form').elements.id.value);
   });
   document.addEventListener('click', (event) => {
+    if (event.target.closest('[data-add-unscheduled]')) {
+      openEditor('', 'Unscheduled');
+      return;
+    }
     const groupBar = event.target.closest('[data-group-id]');
     if (groupBar) {
       openGroupDialog(groupBar.dataset.groupId, groupBar.dataset.groupStudio);
@@ -1145,6 +1298,68 @@ function bindEvents() {
     if (move) {
       persistAndRender(moveMilestone(roadmap, move.dataset.moveId, move.dataset.direction));
     }
+  });
+  document.addEventListener('change', (event) => {
+    const unlock = event.target.closest?.('[data-unlock-history]');
+    if (unlock) {
+      unlockHistory = Boolean(unlock.checked);
+      render();
+      return;
+    }
+    const status = event.target.closest?.('[data-planning-status]');
+    if (status) {
+      const copy = structuredClone(roadmap);
+      const item = copy.milestones.find((milestone) => milestone.id === status.dataset.planningStatus);
+      if (!item || !roadmap.statusOrder.includes(status.value)) return;
+      item.status = status.value;
+      persistAndRender(copy);
+      notify(`Status updated to ${status.value}.`);
+    }
+  });
+  document.addEventListener('dragstart', (event) => {
+    const card = event.target.closest?.('[data-plan-id]');
+    if (!card || !editMode) return;
+    const item = roadmap.milestones.find((milestone) => milestone.id === card.dataset.planId);
+    if (!item || (isProtectedHistory(item) && !unlockHistory)) {
+      event.preventDefault();
+      notify('Completed/live August and September history is locked. Enable the history unlock to move it.', 'error');
+      return;
+    }
+    draggedMilestoneId = item.id;
+    card.classList.add('is-dragging');
+    if (event.dataTransfer) {
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', item.id);
+    }
+  });
+  document.addEventListener('dragover', (event) => {
+    if (!draggedMilestoneId || !editMode) return;
+    const dropzone = event.target.closest?.('[data-planning-period]');
+    if (!dropzone) return;
+    event.preventDefault();
+    document.querySelectorAll('.is-drop-target').forEach((element) => element.classList.remove('is-drop-target'));
+    dropzone.classList.add('is-drop-target');
+  });
+  document.addEventListener('drop', (event) => {
+    if (!draggedMilestoneId || !editMode) return;
+    const dropzone = event.target.closest?.('[data-planning-period]');
+    if (!dropzone) return;
+    event.preventDefault();
+    const targetPeriod = dropzone.dataset.planningPeriod;
+    const targetCard = event.target.closest?.('[data-plan-id]');
+    let copy = moveMilestoneToPeriod(roadmap, draggedMilestoneId, targetPeriod);
+    if (targetCard && targetCard.dataset.planId !== draggedMilestoneId) {
+      copy = reorderMilestoneInPeriod(copy, draggedMilestoneId, targetCard.dataset.planId);
+    }
+    persistAndRender(copy);
+    notify(`Moved to ${targetPeriod}.`);
+    draggedMilestoneId = '';
+  });
+  document.addEventListener('dragend', () => {
+    draggedMilestoneId = '';
+    document.querySelectorAll('.is-dragging,.is-drop-target').forEach((element) => {
+      element.classList.remove('is-dragging', 'is-drop-target');
+    });
   });
   document.querySelector('#milestone-dialog').addEventListener('click', (event) => {
     if (event.target === event.currentTarget) closeEditor();

@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-09-16T10:55:00.000Z",
+  "updatedAt": "2026-09-16T12:30:00.000Z",
   "page": {
     "eyebrow": "AVANI REPORT BUILDER™",
     "title": "Client Dashboard Roadmap",
@@ -46,8 +46,8 @@
         "Branding & Client Identity",
         "AI & Account Intelligence",
         "Publishing & Compatibility",
-        "Next — Reporting Experience",
-        "Future — Sales & External Intelligence"
+        "Reporting Experience Roadmap",
+        "Sales & External Intelligence"
       ],
       "laneMeta": {
         "Foundation & Prototyping": {
@@ -74,13 +74,13 @@
           "label": "Publishing & Compatibility",
           "description": "Client output continuity, export compatibility and production-ready report delivery."
         },
-        "Next — Reporting Experience": {
-          "label": "Next — Reporting Experience",
-          "description": "Approved next work across reporting cadence, sources, CQ intelligence, pacing and account opportunity."
+        "Reporting Experience Roadmap": {
+          "label": "Reporting Experience Roadmap",
+          "description": "Planned work across reporting cadence, new lead sources, CQ intelligence, pacing and account opportunity."
         },
-        "Future — Sales & External Intelligence": {
-          "label": "Future — Sales & External Intelligence",
-          "description": "Longer-term account/lead detail, external intelligence, battlecards and next-best-action activation."
+        "Sales & External Intelligence": {
+          "label": "Sales & External Intelligence",
+          "description": "Account and lead detail, external intelligence, battlecards and cross-channel activation capabilities."
         }
       }
     },
@@ -97,7 +97,7 @@
         "Paid Media Source Automation",
         "QA, Reconciliation & Reliability",
         "Publishing & Reporting History",
-        "Next / Future — Scale Intelligence"
+        "Scale Intelligence Roadmap"
       ],
       "laneMeta": {
         "Cross-Channel Prototype": {
@@ -120,9 +120,9 @@
           "label": "Publishing & Reporting History",
           "description": "Secure publishing, safeguards, immutable snapshots and exact published-workspace restoration."
         },
-        "Next / Future — Scale Intelligence": {
-          "label": "Next / Future — Scale Intelligence",
-          "description": "Richer account movement, recommendations, account detail and cross-channel activation signals."
+        "Scale Intelligence Roadmap": {
+          "label": "Scale Intelligence Roadmap",
+          "description": "Planned evolution of paid-media, account-prioritization and cross-channel intelligence capabilities."
         }
       }
     }
@@ -131,9 +131,11 @@
     "aug": "August foundation",
     "sep": "September refinement",
     "aug-sep": "Core studio build",
-    "sep-next": "Active now",
-    "next": "Next",
-    "future": "Future layer"
+    "sep-oct": "Active work",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December",
+    "unscheduled": "Unscheduled"
   },
   "milestones": [
     {
@@ -1236,7 +1238,7 @@
     {
       "id": "m-065",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Weekly Pulse + Monthly Full Dashboard cadence",
       "description": "Standardize reporting into a deliberately simple weekly view for changes, pacing, health and action, plus the full Dashboard on a monthly cadence.",
       "status": "In Progress",
@@ -1254,11 +1256,11 @@
     {
       "id": "m-066",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Webinar lead support",
       "description": "Add webinar leads alongside Syndication leads where the source data supports it.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Data Logic",
       "why": "Broadens Report Builder coverage beyond one lead source while preserving source identity.",
       "notes": "",
@@ -1271,11 +1273,11 @@
     {
       "id": "m-067",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Client-Provided lead support",
       "description": "Add client-provided leads as another reportable lead source.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Data Logic",
       "why": "Extends the report toward a fuller view of program demand sources.",
       "notes": "",
@@ -1288,11 +1290,11 @@
     {
       "id": "m-068",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Lead-source filters / toggles",
       "description": "Allow clients to view Syndication, Webinar, Client-Provided or combinations of those sources.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "UX",
       "why": "Keeps multi-source reporting understandable without flattening source differences.",
       "notes": "",
@@ -1305,11 +1307,11 @@
     {
       "id": "m-069",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "State-level geographic view",
       "description": "Add a more useful state-level geographic view where the campaign data supports meaningful state analysis.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Feature",
       "why": "Makes geography more actionable for domestic campaign analysis.",
       "notes": "",
@@ -1322,11 +1324,11 @@
     {
       "id": "m-070",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Consolidated audience / role / title view",
       "description": "Clean up and consolidate the audience, role, seniority and title experience so related signals are easier to interpret together.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "UX",
       "why": "Reduces repetitive charts and clarifies the buying-audience story.",
       "notes": "",
@@ -1340,11 +1342,11 @@
     {
       "id": "m-071",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Custom Question Response intelligence",
       "description": "Add a dedicated CQ response section with visualization and drill-down into who selected each response.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Turns explicit qualification responses into visible client intelligence.",
       "notes": "",
@@ -1357,11 +1359,11 @@
     {
       "id": "m-072",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "CQ-driven recommendations",
       "description": "Use CQ response patterns as inputs to report intelligence and recommendations where appropriate.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Shows additional value from thoughtfully designed CQs beyond collecting the answer itself.",
       "notes": "",
@@ -1374,11 +1376,11 @@
     {
       "id": "m-073",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Clear firmographic definitions",
       "description": "Keep SMB, Mid-Market, Enterprise and Large/Strategic segmentation while making the definitions transparent in the report.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "UX",
       "why": "Makes segment interpretation defensible and easier for clients to understand.",
       "notes": "",
@@ -1391,11 +1393,11 @@
     {
       "id": "m-074",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Multi-month / multi-publisher pacing",
       "description": "Improve pacing logic for longer-running campaigns and multiple publishers, separating period pacing from campaign-lifetime pacing and combined coverage.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Data Logic",
       "why": "Prevents campaign health from being distorted by timing or publisher-allocation differences.",
       "notes": "",
@@ -1408,11 +1410,11 @@
     {
       "id": "m-075",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "More prominent ISS / quadrant experience",
       "description": "Make the Intent Super Score and opportunity quadrant more prominent and easier to understand.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "UX",
       "why": "Makes account-prioritization intelligence more usable for client decision-making.",
       "notes": "",
@@ -1425,11 +1427,11 @@
     {
       "id": "m-076",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Score-group guidance & filters",
       "description": "Add hover guidance and filters for the different ISS score groups / quadrants.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "UX",
       "why": "Explains what each score area means and lets clients inspect the relevant account set.",
       "notes": "",
@@ -1443,11 +1445,11 @@
     {
       "id": "m-077",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Lead / account counts inside score areas",
       "description": "Show the number of leads and accounts within each score area instead of relying only on score values.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Feature",
       "why": "Adds population context to the score distribution.",
       "notes": "",
@@ -1460,11 +1462,11 @@
     {
       "id": "m-078",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Parity-first ISS processor",
       "description": "Build a modular Intent & Enrichment processor for Campaign Leads, TAL, Bombora and ZoomInfo with auditable matching, standardized account intelligence, side-by-side ISS parity comparison and QA output.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Data Logic",
       "why": "The processor must reproduce the current ISS scores, bands and rankings before replacing the existing path.",
       "notes": "Approved design dated August 24, 2026; intentionally not marked shipped.",
@@ -1479,11 +1481,11 @@
     {
       "id": "m-079",
       "studio": "syndication",
-      "category": "Next — Reporting Experience",
+      "category": "Reporting Experience Roadmap",
       "title": "Expanded Account Intelligence",
       "description": "Expand company priorities, role-level priorities, likely concerns and strategic rationale inside the account intelligence layer.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Makes the report more useful for deciding how to follow up on high-priority accounts.",
       "notes": "",
@@ -1496,11 +1498,11 @@
     {
       "id": "m-080",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Prospect-company website intelligence",
       "description": "Pull relevant public themes from the prospect company website for grounded account context.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Adds company-specific context beyond campaign behavior alone.",
       "notes": "",
@@ -1513,11 +1515,11 @@
     {
       "id": "m-081",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Syndicated-content intelligence",
       "description": "Use the actual content being syndicated as an input to account and lead interpretation.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Connects campaign engagement to the themes the prospect was exposed to.",
       "notes": "",
@@ -1529,11 +1531,11 @@
     {
       "id": "m-082",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Client website / content intelligence",
       "description": "Use the client’s own website and content to ground recommendation and message alignment.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Keeps recommendations connected to what the client actually offers and says.",
       "notes": "",
@@ -1546,11 +1548,11 @@
     {
       "id": "m-083",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Client offering / message alignment",
       "description": "Tie prospect, role and content insights back to the client’s relevant messaging and offering.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Moves account intelligence toward practical, client-specific positioning.",
       "notes": "",
@@ -1563,11 +1565,11 @@
     {
       "id": "m-084",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Individual lead / account detail view",
       "description": "Create a dedicated detail view combining account, person, campaign, content, CQ and intent signals.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Feature",
       "why": "Provides a single place to understand why a specific lead or account matters.",
       "notes": "",
@@ -1580,11 +1582,11 @@
     {
       "id": "m-085",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "SDR / BDR Battlecard add-on",
       "description": "Create a lead-level sales brief with company context, person context, content/CQ signals, likely concerns and suggested messaging.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Turns report intelligence into practical follow-up context for Sales.",
       "notes": "",
@@ -1597,11 +1599,11 @@
     {
       "id": "m-086",
       "studio": "syndication",
-      "category": "Future — Sales & External Intelligence",
+      "category": "Sales & External Intelligence",
       "title": "Cross-channel Next Best Action",
       "description": "Strengthen recommendations across Syndication, Paid Media, ABM, Handraiser and related activation paths.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Moves the product from explaining what happened to helping clients decide what to do next.",
       "notes": "",
@@ -2393,11 +2395,11 @@
     {
       "id": "m-132",
       "studio": "scale",
-      "category": "Next / Future — Scale Intelligence",
+      "category": "Scale Intelligence Roadmap",
       "title": "Richer weekly account movement",
       "description": "Make weekly movement in account-level Paid Media / Syndication signals easier to see and compare over time.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Adds a more useful temporal view of which accounts are strengthening or cooling.",
       "notes": "",
@@ -2410,11 +2412,11 @@
     {
       "id": "m-133",
       "studio": "scale",
-      "category": "Next / Future — Scale Intelligence",
+      "category": "Scale Intelligence Roadmap",
       "title": "Deeper Paid Media recommendations",
       "description": "Strengthen recommendations tied to Paid Media performance, creative patterns and account priorities.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Moves Scale reporting beyond channel reporting toward action guidance.",
       "notes": "",
@@ -2427,11 +2429,11 @@
     {
       "id": "m-134",
       "studio": "scale",
-      "category": "Next / Future — Scale Intelligence",
+      "category": "Scale Intelligence Roadmap",
       "title": "Cross-channel activation signals",
       "description": "Connect Paid Media, Syndication and account-level signals to identify where another activation motion is warranted.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Uses the unified Scale dataset to support better cross-channel decisions.",
       "notes": "",
@@ -2444,11 +2446,11 @@
     {
       "id": "m-135",
       "studio": "scale",
-      "category": "Next / Future — Scale Intelligence",
+      "category": "Scale Intelligence Roadmap",
       "title": "Improved Scale account detail",
       "description": "Create a deeper account-level view combining Paid Media, Syndication and Named-account context.",
       "status": "Planned",
-      "period": "Next",
+      "period": "Unscheduled",
       "workType": "Feature",
       "why": "Makes the unified report more useful for account-level review and follow-up.",
       "notes": "",
@@ -2460,11 +2462,11 @@
     {
       "id": "m-136",
       "studio": "scale",
-      "category": "Next / Future — Scale Intelligence",
+      "category": "Scale Intelligence Roadmap",
       "title": "Scale Next Best Action framework",
       "description": "Evolve the Scale report toward clearer recommended actions across Paid Media, Syndication, ABM and Handraiser-style motions where relevant.",
       "status": "Future",
-      "period": "Future",
+      "period": "Unscheduled",
       "workType": "Intelligence",
       "why": "Extends the unified report from observing campaign performance into recommended activation.",
       "notes": "",
