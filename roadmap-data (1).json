@@ -1,0 +1,2478 @@
+{
+  "version": 4,
+  "updatedAt": "2026-09-16T10:55:00.000Z",
+  "page": {
+    "eyebrow": "AVANI REPORT BUILDER™",
+    "title": "Client Dashboard Roadmap",
+    "description": "Complete product-build roadmap for AVANI REPORT BUILDER™ — showing every meaningful capability, refinement, reliability fix and future plan since the official August 2026 start.",
+    "summaryLabel": "Product direction",
+    "summaryStatement": "Official start: August 2026",
+    "summaryMicro": "The timeline stays compact. Open any initiative to see the Complete Build History behind it — including features, data logic, QA, publishing, automation and stabilization work.",
+    "officialStart": "August 2026",
+    "footerLeft": "AVANI REPORT BUILDER™ · Client Dashboard Roadmap",
+    "footerRight": "Syndication Studio · Scale Studio"
+  },
+  "statusOrder": [
+    "Completed",
+    "Live",
+    "In Progress",
+    "Planned",
+    "Future"
+  ],
+  "workTypes": [
+    "Foundation",
+    "Feature",
+    "Data Logic",
+    "Intelligence",
+    "UX",
+    "QA",
+    "Publishing",
+    "Automation",
+    "Reliability",
+    "Fix / Stabilization"
+  ],
+  "studios": {
+    "syndication": {
+      "label": "Syndication Studio",
+      "eyebrow": "Content Syndication Reporting",
+      "focus": "AVANI REPORT BUILDER™ Studio for configuring campaign inputs, generating client-ready Content Syndication reports, and evolving account, content, and intent intelligence.",
+      "question": "How do we turn campaign delivery data into a reusable, defensible client report?",
+      "productLabel": "AVANI REPORT BUILDER™ — Syndication Studio",
+      "description": "Reusable campaign configuration, client reporting, content/audience analysis, and the next intelligence layer.",
+      "categoryOrder": [
+        "Foundation & Prototyping",
+        "Universal Builder Core",
+        "Report Experience & Adaptive Logic",
+        "Branding & Client Identity",
+        "AI & Account Intelligence",
+        "Publishing & Compatibility",
+        "Next — Reporting Experience",
+        "Future — Sales & External Intelligence"
+      ],
+      "laneMeta": {
+        "Foundation & Prototyping": {
+          "label": "Foundation & Prototyping",
+          "description": "The first client-report prototype and the controls that established the product direction."
+        },
+        "Universal Builder Core": {
+          "label": "Universal Builder Core",
+          "description": "Reusable setup, file ingestion, campaign models, mapping, validation, preview and export."
+        },
+        "Report Experience & Adaptive Logic": {
+          "label": "Report Experience & Adaptive Logic",
+          "description": "Client/internal presentation, adaptive campaign logic, audience, account, GEO and firmographic experiences."
+        },
+        "Branding & Client Identity": {
+          "label": "Branding & Client Identity",
+          "description": "Client wordmarks, brand treatment and the productized AVANI REPORT BUILDER™ workspace."
+        },
+        "AI & Account Intelligence": {
+          "label": "AI & Account Intelligence",
+          "description": "AI Campaign Strategist, account prioritization, ISS, intent context and decision-support modules."
+        },
+        "Publishing & Compatibility": {
+          "label": "Publishing & Compatibility",
+          "description": "Client output continuity, export compatibility and production-ready report delivery."
+        },
+        "Next — Reporting Experience": {
+          "label": "Next — Reporting Experience",
+          "description": "Approved next work across reporting cadence, sources, CQ intelligence, pacing and account opportunity."
+        },
+        "Future — Sales & External Intelligence": {
+          "label": "Future — Sales & External Intelligence",
+          "description": "Longer-term account/lead detail, external intelligence, battlecards and next-best-action activation."
+        }
+      }
+    },
+    "scale": {
+      "label": "Scale Studio",
+      "eyebrow": "Unified Campaign Reporting",
+      "focus": "Dedicated AVANI REPORT BUILDER™ Studio combining Paid Media, Content Syndication, and Named-account inputs with source-aware QA, preview, export, history, and publishing.",
+      "question": "How do we produce one client-ready Scale report across paid and syndication sources without mixing unlike metrics?",
+      "productLabel": "AVANI REPORT BUILDER™ — Scale Studio",
+      "description": "Dedicated Scale reporting across Paid Media, Content Syndication, Named accounts, QA, preview, export, and publishing.",
+      "categoryOrder": [
+        "Cross-Channel Prototype",
+        "Dedicated Builder & Workspaces",
+        "Paid Media Source Automation",
+        "QA, Reconciliation & Reliability",
+        "Publishing & Reporting History",
+        "Next / Future — Scale Intelligence"
+      ],
+      "laneMeta": {
+        "Cross-Channel Prototype": {
+          "label": "Cross-Channel Prototype",
+          "description": "The proof of concept unifying Core, Named, Content Syndication and Paid Media without mixing unlike metrics."
+        },
+        "Dedicated Builder & Workspaces": {
+          "label": "Dedicated Builder & Workspaces",
+          "description": "The Scale-specific product shell, source workspaces, desktop preview and client-output workflow."
+        },
+        "Paid Media Source Automation": {
+          "label": "Paid Media Source Automation",
+          "description": "Source-aware refresh, campaign collections, creative sync, fallback imports and source-window handling."
+        },
+        "QA, Reconciliation & Reliability": {
+          "label": "QA, Reconciliation & Reliability",
+          "description": "Data QA, reconciliation, preview gates, PDF fixes, manifests and stabilization work."
+        },
+        "Publishing & Reporting History": {
+          "label": "Publishing & Reporting History",
+          "description": "Secure publishing, safeguards, immutable snapshots and exact published-workspace restoration."
+        },
+        "Next / Future — Scale Intelligence": {
+          "label": "Next / Future — Scale Intelligence",
+          "description": "Richer account movement, recommendations, account detail and cross-channel activation signals."
+        }
+      }
+    }
+  },
+  "barLabels": {
+    "aug": "August foundation",
+    "sep": "September refinement",
+    "aug-sep": "Core studio build",
+    "sep-next": "Active now",
+    "next": "Next",
+    "future": "Future layer"
+  },
+  "milestones": [
+    {
+      "id": "m-001",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Client-report prototype foundation",
+      "description": "Established the initial Autodesk-style client report pattern with branded hero, executive metrics, filters, account/GEO analysis, audience analysis, and client-facing presentation.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Provided the reference experience that the reusable builder later needed to generate instead of hand-coding each report.",
+      "notes": "Grounded in the Autodesk Four-Touch Client/Internal report prototype; represented in August as the official product origin.",
+      "tags": [
+        "Prototype",
+        "Client Report"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-002",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Client / Internal presentation modes",
+      "description": "Created separate Client View and Internal View behavior so the client could receive a controlled report while the AVANI team retained additional review and management controls.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made one report useful for both client delivery and internal QA without maintaining two separate files.",
+      "notes": "Grounded in the Autodesk Client/Internal report and add-on guide.",
+      "tags": [
+        "Client View",
+        "Internal View"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-003",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Protected Internal view access",
+      "description": "Added an internal-password field to the report setup so AVANI-only report controls and analysis could be separated from the client-facing view within the same generated report.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Protected internal-only reporting context while preserving a single report artifact for client delivery and AVANI review.",
+      "notes": "Grounded in the August 3 Universal Report Builder v1 source, which includes an Internal password in report setup.",
+      "tags": [
+        "Internal View",
+        "Access",
+        "Client Safety"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-004",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Export Summary control",
+      "description": "Added an internal control to create a summary from the active report and current filters.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made the report operationally useful beyond on-screen viewing.",
+      "notes": "",
+      "tags": [
+        "Export",
+        "Internal Controls"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-005",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Editable client menus",
+      "description": "Added internal controls for choosing which report sections are visible in the client experience.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Allowed the report experience to be tailored without rebuilding the whole output.",
+      "notes": "",
+      "tags": [
+        "Menu",
+        "Client Experience"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-006",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Print / PDF output",
+      "description": "Added a clean static-output path for client-ready printing and PDF generation after the active view was reviewed.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Publishing",
+      "why": "Provided a portable client-facing format in addition to the interactive HTML report.",
+      "notes": "",
+      "tags": [
+        "PDF",
+        "Print"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-007",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Interactive report filtering",
+      "description": "Added filters for account, geography and other supported dimensions so report sections could be explored without regenerating the file.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Turned the report from a static readout into an interactive client analysis experience.",
+      "notes": "",
+      "tags": [
+        "Filters",
+        "Interactive"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-008",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Executive performance readout",
+      "description": "Introduced an executive summary layer above detailed tables and charts to explain the campaign story before the supporting analysis.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made the report easier for client stakeholders to consume at a glance.",
+      "notes": "",
+      "tags": [
+        "Executive Overview",
+        "Narrative"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-009",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "Account & GEO report view",
+      "description": "Created a dedicated account and geographic analysis experience with account concentration, geographic coverage, and map-oriented reporting.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Expanded the report beyond lead volume into where program reach was actually occurring.",
+      "notes": "",
+      "tags": [
+        "Accounts",
+        "GEO",
+        "Map"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-010",
+      "studio": "syndication",
+      "category": "Foundation & Prototyping",
+      "title": "TAL coverage visibility",
+      "description": "Added target-account-list coverage and match-rate reporting for named-account programs.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Made account-program delivery measurable against the supplied target account list.",
+      "notes": "",
+      "tags": [
+        "TAL",
+        "Coverage"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-011",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Universal Report Builder foundation",
+      "description": "Established the reusable AVANI REPORT BUILDER™ shell with report setup, builder controls, generated-report preview, validation, and standalone output.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Converted a one-off report into reusable software that could generate multiple client reports.",
+      "notes": "Verified in the August Universal Report Builder lineage.",
+      "tags": [
+        "Builder",
+        "Foundation"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-012",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Report setup & client identity",
+      "description": "Added reusable report setup fields for client name, client slug, report title, reporting period, prepared date, campaign model, and strategic context.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Moved client-specific context into configuration instead of hard-coded report text.",
+      "notes": "",
+      "tags": [
+        "Report Setup",
+        "Client Identity"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-013",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Campaign type & multi-touch configuration",
+      "description": "Added support for 1 Touch, 2 Touch, 3 Touch, 4 Touch and Multiple Touch campaign structures so the generated report could adapt to different syndication models.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Allowed one builder to support multiple campaign designs rather than only the original four-touch example.",
+      "notes": "",
+      "tags": [
+        "Campaign Type",
+        "Multi-touch"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-014",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Reporting calendar configuration",
+      "description": "Added reporting-period and prepared-date handling so generated reports display the correct reporting context.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made report timing configurable and reusable across client reporting periods.",
+      "notes": "",
+      "tags": [
+        "Calendar",
+        "Reporting Period"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-015",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "CSV / XLS / XLSX campaign ingestion",
+      "description": "Added campaign-delivery upload support across CSV and Excel formats with the first worksheet used where applicable.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Reduced manual source conversion and made the builder practical for real campaign files.",
+      "notes": "",
+      "tags": [
+        "CSV",
+        "Excel",
+        "Ingestion"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-016",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "TAL / Named Account ingestion",
+      "description": "Added optional target-account / named-account upload with automatic account or domain detection where supported.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Enabled the same builder to support both open campaigns and account-list-driven programs.",
+      "notes": "",
+      "tags": [
+        "TAL",
+        "Named Accounts"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-017",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Intent & enrichment signal ingestion",
+      "description": "Added optional account-level intent and enrichment inputs such as brand intent, product intent, clicks, sessions, website activity, topic cluster, and buying stage.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Created a path for the report to incorporate account-level context beyond campaign-delivery rows.",
+      "notes": "",
+      "tags": [
+        "Intent",
+        "Enrichment"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-018",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Automatic campaign-field mapping",
+      "description": "Added automatic detection and mapping of uploaded source columns into the builder’s expected report fields.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Reduced repetitive setup when source files use different column names.",
+      "notes": "",
+      "tags": [
+        "Mapping",
+        "Automation"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-019",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Manual mapping correction",
+      "description": "Allowed auto-mapped campaign fields to be reviewed and adjusted inside the builder before report generation.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Kept automation flexible when a source file needed human correction.",
+      "notes": "",
+      "tags": [
+        "Mapping",
+        "Review"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-020",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Required-field validation",
+      "description": "Added validation feedback around required inputs and data readiness before preview/export.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Caught source problems before they reached the client-facing report.",
+      "notes": "",
+      "tags": [
+        "Validation",
+        "QA"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-021",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Configurable report modules",
+      "description": "Added a module directory so report capabilities could remain available while the generated output selected the relevant sections for a program.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made the builder extensible rather than tied to one fixed report structure.",
+      "notes": "",
+      "tags": [
+        "Modules",
+        "Configuration"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-022",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Restore Demo workflow",
+      "description": "Added a reusable demo restore path so the builder could be tested and demonstrated without preparing a new source file every time.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Created a repeatable test fixture for builder validation and internal demonstrations.",
+      "notes": "",
+      "tags": [
+        "Demo",
+        "Test Fixture"
+      ],
+      "order": 12
+    },
+    {
+      "id": "m-023",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "In-builder generated report preview",
+      "description": "Added a live preview pane that renders the generated client report directly alongside the builder configuration.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Allowed QA and visual review before exporting or publishing.",
+      "notes": "",
+      "tags": [
+        "Preview",
+        "Builder"
+      ],
+      "order": 13
+    },
+    {
+      "id": "m-024",
+      "studio": "syndication",
+      "category": "Universal Builder Core",
+      "title": "Standalone HTML export",
+      "description": "Added export of the processed report as a standalone HTML file with report data and client experience embedded.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Publishing",
+      "why": "Created a portable output that could be shared independently of the builder.",
+      "notes": "",
+      "tags": [
+        "HTML",
+        "Export"
+      ],
+      "order": 14
+    },
+    {
+      "id": "m-025",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Adaptive Content Journey",
+      "description": "Adjusted content reporting to the actual campaign touch count: one-touch content focus, two-touch progression, and multi-touch journey/sequence treatment.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Prevented every campaign from being forced into the original four-touch narrative.",
+      "notes": "",
+      "tags": [
+        "Content Journey",
+        "Adaptive"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-026",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Conditional persona alignment",
+      "description": "Made persona-related interpretation conditional on available mapped source data rather than assuming persona data always exists.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Reduced unsupported audience claims when a source file did not contain the needed persona field.",
+      "notes": "",
+      "tags": [
+        "Persona",
+        "Conditional Logic"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-027",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Large-account selector usability",
+      "description": "Improved account-selection behavior so reports with more accounts remained usable instead of creating an unwieldy fixed list.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Improved report usability as the number of active accounts increased.",
+      "notes": "",
+      "tags": [
+        "Account Filter",
+        "Usability"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-028",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Expanded TAL coverage treatment",
+      "description": "Refined TAL coverage presentation so named-account performance received more prominent and readable treatment in the report.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made target-account performance easier to interpret for named-account programs.",
+      "notes": "",
+      "tags": [
+        "TAL",
+        "Presentation"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-029",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Campaign target volume + target-aware pacing",
+      "description": "Added an optional campaign target-volume input that enables target-aware executive pacing and completion context only when the supporting campaign target is supplied.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Made pacing more decision-useful without inventing progress-to-goal when the campaign target is unknown.",
+      "notes": "Grounded in the Priority Intent / later Universal Builder lineage, where campaign target volume explicitly enables target-aware executive pacing.",
+      "tags": [
+        "Pacing",
+        "Target Volume",
+        "Executive Overview"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-030",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Open-campaign vs TAL-aware logic",
+      "description": "Kept open campaigns from using TAL-specific language while enabling target-account logic only when the relevant source is present.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Protected the meaning of the report across different campaign types.",
+      "notes": "",
+      "tags": [
+        "Open Campaign",
+        "TAL"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-031",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Account, GEO, industry & audience intelligence",
+      "description": "Expanded reporting across account reach, geography, industry, seniority, title/persona and company-size dimensions.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Intelligence",
+      "why": "Moved the report from delivery totals toward a more useful view of who the campaign was reaching.",
+      "notes": "",
+      "tags": [
+        "Accounts",
+        "GEO",
+        "Audience",
+        "Industry"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-032",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Account / domain identity handling",
+      "description": "Added account-resolution behavior that uses account/domain context to consolidate and interpret account-level report activity.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Improved account-level reporting when company names vary across source records.",
+      "notes": "",
+      "tags": [
+        "Account Identity",
+        "Domain"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-033",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Firmographic segmentation",
+      "description": "Added firmographic segmentation for SMB, Mid-Market, Enterprise and Large/Strategic account analysis when supported by employee/revenue data.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Intelligence",
+      "why": "Made company-size composition and account mix visible to clients.",
+      "notes": "",
+      "tags": [
+        "Firmographics",
+        "Segments"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-034",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Evidence-aware enrichment handling",
+      "description": "Refined enrichment behavior so unsupported firmographic values are left as insufficient/unknown rather than being silently invented.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Improved the defensibility of client-facing account intelligence.",
+      "notes": "",
+      "tags": [
+        "Enrichment",
+        "Data Trust"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-035",
+      "studio": "syndication",
+      "category": "Report Experience & Adaptive Logic",
+      "title": "Single-touch content pie",
+      "description": "Added a single-touch-specific content visualization so one-touch campaigns did not inherit multi-touch content-journey presentation that did not fit the program structure.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Kept the generated report logic appropriate to the selected campaign type.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v8_Single_Touch_Pie.html.",
+      "tags": [
+        "Single Touch",
+        "Content Visualization"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-036",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Integrated report logos",
+      "description": "Integrated brand/logo handling into the early Universal Report Builder rather than treating logos as a manual post-export step.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Established branding as part of the reusable builder workflow from the first product iterations.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v2_Integrated_Logos.html.",
+      "tags": [
+        "Branding",
+        "Logo"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-037",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "AVANI logo integration",
+      "description": "Added AVANI branding directly into the builder experience as the product interface began to take shape.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made the tool visibly an AVANI product rather than only a generated client report.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v3_Avani_Logo.html.",
+      "tags": [
+        "AVANI",
+        "Branding"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-038",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Logo mark + client name presentation",
+      "description": "Refined client branding so a logo mark could be paired with the client name when a complete wordmark was not available.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Improved brand readability when available logo assets were icon-only.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v13_Logo_Mark_and_Client_Name.html.",
+      "tags": [
+        "Logo Mark",
+        "Client Name"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-039",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Exact website wordmark lookup",
+      "description": "Added a website-oriented lookup iteration intended to use the exact client wordmark associated with the supplied company site.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Improved accuracy of automatically sourced client branding.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v14_Exact_Website_Wordmark.html.",
+      "tags": [
+        "Wordmark",
+        "Website Lookup"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-040",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Default wordmark-provider client ID",
+      "description": "Added a default provider client-ID configuration to make higher-quality client wordmark lookup easier to use in the builder.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Reduced repetitive setup for the automated brand-asset workflow.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v15_Default_Brandfetch_Client_ID.html.",
+      "tags": [
+        "Wordmark",
+        "Provider Config"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-041",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Locked wordmark-provider client ID",
+      "description": "Locked the provider client-ID configuration after testing so operators did not need to manage the integration value during normal builder use.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Reduced operator error and stabilized the automated wordmark workflow.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v16_Locked_Brandfetch_Client_ID.html.",
+      "tags": [
+        "Wordmark",
+        "Configuration"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-042",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Trademarked product branding",
+      "description": "Added the trademark treatment to AVANI REPORT BUILDER™ as the tool moved from an internal builder concept toward a named product.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Formalized the product identity used across later builder versions.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v18_Trademarked.html.",
+      "tags": [
+        "Trademark",
+        "Product Brand"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-043",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Font-aligned rounded builder logo",
+      "description": "Refined the builder header typography and rounded logo treatment to create a more cohesive software identity.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Improved visual consistency as AVANI REPORT BUILDER™ became a repeatable internal product.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v21_Builder_Font_Aligned_Rounded_Logo.html.",
+      "tags": [
+        "Typography",
+        "Logo",
+        "UX"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-044",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Larger header branding",
+      "description": "Expanded and refined the AVANI REPORT BUILDER™ header treatment so the product identity, actions and client-facing build workflow read more clearly as a software workspace.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Improved hierarchy and product recognition as the builder matured from a utility into a branded reporting application.",
+      "notes": "Grounded in Avani_Universal_Report_Builder_v28_Larger_Header_Branding.html.",
+      "tags": [
+        "Header",
+        "Branding",
+        "Product UX"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-045",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Client logo upload",
+      "description": "Added a client branding input so the generated report could use an approved client logo or wordmark.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made the generated output client-ready without editing the exported HTML by hand.",
+      "notes": "",
+      "tags": [
+        "Branding",
+        "Logo"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-046",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Automatic wordmark lookup",
+      "description": "Added client-website-based lookup for the official company wordmark, with the goal of preserving the company name as part of the brand artwork.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Reduced manual brand-asset hunting when an official wordmark could be found automatically.",
+      "notes": "",
+      "tags": [
+        "Wordmark",
+        "Automation"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-047",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Wordmark image cleanup & header treatment",
+      "description": "Added image processing to remove flat backgrounds, crop excess space, and prepare client brand assets for the report header.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Improved consistency of client branding in exported reports.",
+      "notes": "",
+      "tags": [
+        "Image Processing",
+        "Header"
+      ],
+      "order": 12
+    },
+    {
+      "id": "m-048",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Full-wordmark preference + icon fallback control",
+      "description": "Added logic and controls to prefer a full company wordmark while allowing a logo-mark fallback only when explicitly enabled.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Prevented the builder from silently substituting an icon where the client name was expected in the brand artwork.",
+      "notes": "",
+      "tags": [
+        "Wordmark",
+        "Fallback"
+      ],
+      "order": 13
+    },
+    {
+      "id": "m-049",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Higher-quality wordmark provider configuration",
+      "description": "Added a locked higher-quality wordmark lookup configuration plus a direct-image-URL fallback for approved brand assets.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Made automatic client branding more repeatable while preserving a manual path when lookup quality was insufficient.",
+      "notes": "",
+      "tags": [
+        "Branding",
+        "Reliability"
+      ],
+      "order": 14
+    },
+    {
+      "id": "m-050",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "Refined builder workspace",
+      "description": "Reworked the builder layout and visual hierarchy so setup, data mapping, intelligence and report preview felt like a coherent software workspace.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made the tool easier to operate as capabilities accumulated.",
+      "notes": "",
+      "tags": [
+        "Workspace",
+        "UX"
+      ],
+      "order": 15
+    },
+    {
+      "id": "m-051",
+      "studio": "syndication",
+      "category": "Branding & Client Identity",
+      "title": "AVANI REPORT BUILDER™ product branding",
+      "description": "Formalized the product identity and campaign-intelligence-generator framing inside the builder interface.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Shifted the work from a collection of report files into a recognizable product experience.",
+      "notes": "",
+      "tags": [
+        "Brand",
+        "Productization"
+      ],
+      "order": 16
+    },
+    {
+      "id": "m-052",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "AI Campaign Strategist",
+      "description": "Added an AI-assisted section for generating campaign-specific focus areas, callouts, recommendations and interpretation from aggregated campaign metrics.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Intelligence",
+      "why": "Started moving the product from showing data toward explaining what the data means.",
+      "notes": "",
+      "tags": [
+        "AI",
+        "Recommendations"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-053",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Local campaign-insight draft mode",
+      "description": "Added a local rule-based generation mode for testing campaign insights without requiring an external AI connection.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Feature",
+      "why": "Created a safe internal path to test the intelligence workflow before using the company AI workspace.",
+      "notes": "",
+      "tags": [
+        "AI",
+        "Local Mode"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-054",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Company ChatGPT workflow",
+      "description": "Added a workflow that prepares an aggregated campaign brief and exact response format for use in the approved company ChatGPT workspace.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Automation",
+      "why": "Kept AI-assisted reasoning inside an approved workflow while avoiding lead-level personal data in the prompt.",
+      "notes": "",
+      "tags": [
+        "ChatGPT",
+        "Workflow"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-055",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Copy / Open ChatGPT workflow controls",
+      "description": "Added direct builder controls to copy the prepared campaign prompt and open the company AI workspace for completion.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "UX",
+      "why": "Reduced friction in the human-in-the-loop AI workflow.",
+      "notes": "",
+      "tags": [
+        "ChatGPT",
+        "UX"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-056",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Structured AI response import",
+      "description": "Added import of the structured JSON response from the company AI workflow back into the report builder.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Automation",
+      "why": "Turned AI output into structured report content instead of copy-paste prose scattered across the report.",
+      "notes": "",
+      "tags": [
+        "JSON",
+        "AI Import"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-057",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "AI writing-style controls",
+      "description": "Added executive, concise and consultative writing-style options for campaign insight generation.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Feature",
+      "why": "Allowed the intelligence layer to match the intended client communication style.",
+      "notes": "",
+      "tags": [
+        "AI",
+        "Tone"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-058",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Human-reviewed strategic recommendations",
+      "description": "Preserved a human review step for AI-assisted recommendations before they become part of client-facing output.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "QA",
+      "why": "Kept strategic client recommendations reviewable rather than treating generated text as automatically publishable.",
+      "notes": "",
+      "tags": [
+        "AI",
+        "Approval",
+        "QA"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-059",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Priority intent treatment",
+      "description": "Added priority-intent presentation to make stronger account signals more visible inside the reporting experience.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Intelligence",
+      "why": "Helped clients distinguish accounts showing stronger opportunity signals from the broader account set.",
+      "notes": "",
+      "tags": [
+        "Intent",
+        "Priority"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-060",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Current Syndication Intent Super Score",
+      "description": "Maintained an account-level Intent Super Score combining campaign/account depth, recency, geographic reach, persona/buying-group breadth, seniority coverage, content progression, TAL fit and external intent inputs.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Intelligence",
+      "why": "Created a repeatable account-prioritization layer inside Syndication Studio.",
+      "notes": "Current-state behavior is the parity baseline for the approved processor design.",
+      "tags": [
+        "ISS",
+        "Account Intelligence"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-061",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Premium module organization",
+      "description": "Refined the builder’s module structure so the growing set of report capabilities could be organized and managed more clearly.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "UX",
+      "why": "Prevented the builder from becoming an unstructured list of toggles as capabilities expanded.",
+      "notes": "",
+      "tags": [
+        "Modules",
+        "Productization"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-062",
+      "studio": "syndication",
+      "category": "AI & Account Intelligence",
+      "title": "Interactive forecast driver",
+      "description": "Added interactive forecast-driver capability to extend the report from current-state delivery into a more forward-looking reporting experience.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Feature",
+      "why": "Expanded the product from descriptive reporting toward planning and expected-outcome context.",
+      "notes": "",
+      "tags": [
+        "Forecast",
+        "Interactive"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-063",
+      "studio": "syndication",
+      "category": "Publishing & Compatibility",
+      "title": "Published client report continuity",
+      "description": "Kept the generated client report experience stable as the builder gained new source, branding and intelligence capabilities.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Reliability",
+      "why": "Allowed builder evolution without forcing clients to relearn or lose the established report experience.",
+      "notes": "",
+      "tags": [
+        "Compatibility",
+        "Client Report"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-064",
+      "studio": "syndication",
+      "category": "Publishing & Compatibility",
+      "title": "Client-facing PDF / export continuity",
+      "description": "Protected existing PDF and export behavior as the Syndication builder and intelligence layers evolved.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Reliability",
+      "why": "Preserved a client-facing delivery format while new features were added.",
+      "notes": "",
+      "tags": [
+        "PDF",
+        "Export"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-065",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Weekly Pulse + Monthly Full Dashboard cadence",
+      "description": "Standardize reporting into a deliberately simple weekly view for changes, pacing, health and action, plus the full Dashboard on a monthly cadence.",
+      "status": "In Progress",
+      "period": "Ongoing",
+      "workType": "Feature",
+      "why": "Creates a clearer client reporting rhythm without forcing the full report every week.",
+      "notes": "",
+      "tags": [
+        "Cadence",
+        "Weekly",
+        "Monthly"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-066",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Webinar lead support",
+      "description": "Add webinar leads alongside Syndication leads where the source data supports it.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Data Logic",
+      "why": "Broadens Report Builder coverage beyond one lead source while preserving source identity.",
+      "notes": "",
+      "tags": [
+        "Webinar",
+        "Lead Source"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-067",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Client-Provided lead support",
+      "description": "Add client-provided leads as another reportable lead source.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Data Logic",
+      "why": "Extends the report toward a fuller view of program demand sources.",
+      "notes": "",
+      "tags": [
+        "Client Provided",
+        "Lead Source"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-068",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Lead-source filters / toggles",
+      "description": "Allow clients to view Syndication, Webinar, Client-Provided or combinations of those sources.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "UX",
+      "why": "Keeps multi-source reporting understandable without flattening source differences.",
+      "notes": "",
+      "tags": [
+        "Filters",
+        "Lead Sources"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-069",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "State-level geographic view",
+      "description": "Add a more useful state-level geographic view where the campaign data supports meaningful state analysis.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Feature",
+      "why": "Makes geography more actionable for domestic campaign analysis.",
+      "notes": "",
+      "tags": [
+        "GEO",
+        "State"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-070",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Consolidated audience / role / title view",
+      "description": "Clean up and consolidate the audience, role, seniority and title experience so related signals are easier to interpret together.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "UX",
+      "why": "Reduces repetitive charts and clarifies the buying-audience story.",
+      "notes": "",
+      "tags": [
+        "Audience",
+        "Roles",
+        "Titles"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-071",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Custom Question Response intelligence",
+      "description": "Add a dedicated CQ response section with visualization and drill-down into who selected each response.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Turns explicit qualification responses into visible client intelligence.",
+      "notes": "",
+      "tags": [
+        "CQ",
+        "Drilldown"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-072",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "CQ-driven recommendations",
+      "description": "Use CQ response patterns as inputs to report intelligence and recommendations where appropriate.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Shows additional value from thoughtfully designed CQs beyond collecting the answer itself.",
+      "notes": "",
+      "tags": [
+        "CQ",
+        "Recommendations"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-073",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Clear firmographic definitions",
+      "description": "Keep SMB, Mid-Market, Enterprise and Large/Strategic segmentation while making the definitions transparent in the report.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "UX",
+      "why": "Makes segment interpretation defensible and easier for clients to understand.",
+      "notes": "",
+      "tags": [
+        "Firmographics",
+        "Definitions"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-074",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Multi-month / multi-publisher pacing",
+      "description": "Improve pacing logic for longer-running campaigns and multiple publishers, separating period pacing from campaign-lifetime pacing and combined coverage.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Data Logic",
+      "why": "Prevents campaign health from being distorted by timing or publisher-allocation differences.",
+      "notes": "",
+      "tags": [
+        "Pacing",
+        "Publishers"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-075",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "More prominent ISS / quadrant experience",
+      "description": "Make the Intent Super Score and opportunity quadrant more prominent and easier to understand.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "UX",
+      "why": "Makes account-prioritization intelligence more usable for client decision-making.",
+      "notes": "",
+      "tags": [
+        "ISS",
+        "Quadrant"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-076",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Score-group guidance & filters",
+      "description": "Add hover guidance and filters for the different ISS score groups / quadrants.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "UX",
+      "why": "Explains what each score area means and lets clients inspect the relevant account set.",
+      "notes": "",
+      "tags": [
+        "ISS",
+        "Guidance",
+        "Filters"
+      ],
+      "order": 12
+    },
+    {
+      "id": "m-077",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Lead / account counts inside score areas",
+      "description": "Show the number of leads and accounts within each score area instead of relying only on score values.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Feature",
+      "why": "Adds population context to the score distribution.",
+      "notes": "",
+      "tags": [
+        "ISS",
+        "Counts"
+      ],
+      "order": 13
+    },
+    {
+      "id": "m-078",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Parity-first ISS processor",
+      "description": "Build a modular Intent & Enrichment processor for Campaign Leads, TAL, Bombora and ZoomInfo with auditable matching, standardized account intelligence, side-by-side ISS parity comparison and QA output.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Data Logic",
+      "why": "The processor must reproduce the current ISS scores, bands and rankings before replacing the existing path.",
+      "notes": "Approved design dated August 24, 2026; intentionally not marked shipped.",
+      "tags": [
+        "ISS",
+        "Bombora",
+        "ZoomInfo",
+        "Parity"
+      ],
+      "order": 14
+    },
+    {
+      "id": "m-079",
+      "studio": "syndication",
+      "category": "Next — Reporting Experience",
+      "title": "Expanded Account Intelligence",
+      "description": "Expand company priorities, role-level priorities, likely concerns and strategic rationale inside the account intelligence layer.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Makes the report more useful for deciding how to follow up on high-priority accounts.",
+      "notes": "",
+      "tags": [
+        "Account Intelligence",
+        "Priorities"
+      ],
+      "order": 15
+    },
+    {
+      "id": "m-080",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Prospect-company website intelligence",
+      "description": "Pull relevant public themes from the prospect company website for grounded account context.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Adds company-specific context beyond campaign behavior alone.",
+      "notes": "",
+      "tags": [
+        "Website Intelligence",
+        "Accounts"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-081",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Syndicated-content intelligence",
+      "description": "Use the actual content being syndicated as an input to account and lead interpretation.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Connects campaign engagement to the themes the prospect was exposed to.",
+      "notes": "",
+      "tags": [
+        "Content Intelligence"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-082",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Client website / content intelligence",
+      "description": "Use the client’s own website and content to ground recommendation and message alignment.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Keeps recommendations connected to what the client actually offers and says.",
+      "notes": "",
+      "tags": [
+        "Client Content",
+        "Messaging"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-083",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Client offering / message alignment",
+      "description": "Tie prospect, role and content insights back to the client’s relevant messaging and offering.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Moves account intelligence toward practical, client-specific positioning.",
+      "notes": "",
+      "tags": [
+        "Messaging",
+        "Offering"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-084",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Individual lead / account detail view",
+      "description": "Create a dedicated detail view combining account, person, campaign, content, CQ and intent signals.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Feature",
+      "why": "Provides a single place to understand why a specific lead or account matters.",
+      "notes": "",
+      "tags": [
+        "Account Detail",
+        "Lead Detail"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-085",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "SDR / BDR Battlecard add-on",
+      "description": "Create a lead-level sales brief with company context, person context, content/CQ signals, likely concerns and suggested messaging.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Turns report intelligence into practical follow-up context for Sales.",
+      "notes": "",
+      "tags": [
+        "Battlecard",
+        "Sales"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-086",
+      "studio": "syndication",
+      "category": "Future — Sales & External Intelligence",
+      "title": "Cross-channel Next Best Action",
+      "description": "Strengthen recommendations across Syndication, Paid Media, ABM, Handraiser and related activation paths.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Moves the product from explaining what happened to helping clients decide what to do next.",
+      "notes": "",
+      "tags": [
+        "Next Best Action",
+        "Activation"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-087",
+      "studio": "scale",
+      "category": "Cross-Channel Prototype",
+      "title": "Integrated Core + Named + Paid Media prototype",
+      "description": "Built an integrated reporting prototype spanning Core and Named programs across Content Syndication and Paid Media.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Proved the cross-channel reporting model before building the dedicated Scale Studio.",
+      "notes": "",
+      "tags": [
+        "Prototype",
+        "Core",
+        "Named",
+        "Paid Media"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-088",
+      "studio": "scale",
+      "category": "Cross-Channel Prototype",
+      "title": "Core / Named program separation",
+      "description": "Structured the integrated report around separate Core and Named program views instead of blending all campaign activity together.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Preserved the distinct program strategies and audience definitions inside one report.",
+      "notes": "",
+      "tags": [
+        "Core",
+        "Named"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-089",
+      "studio": "scale",
+      "category": "Cross-Channel Prototype",
+      "title": "Cross-channel metric protection",
+      "description": "Explicitly kept Paid Media outcomes separate from Content Syndication delivered leads and economics rather than summing unlike metrics.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Prevented an integrated report from creating misleading combined totals.",
+      "notes": "",
+      "tags": [
+        "Metric Protection",
+        "Cross-channel"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-090",
+      "studio": "scale",
+      "category": "Cross-Channel Prototype",
+      "title": "Reach → Capture → Advance executive story",
+      "description": "Framed the unified report around how Paid Media builds reach, demand capture develops, and Named/CS activity advances account engagement.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Created an executive story across channels without pretending the channels use the same KPIs.",
+      "notes": "",
+      "tags": [
+        "Executive Story",
+        "Narrative"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-091",
+      "studio": "scale",
+      "category": "Cross-Channel Prototype",
+      "title": "Scale client-only unified report",
+      "description": "Produced a client-only campaign-intelligence report with executive story, program sections, Paid Media, content/creative, delivery/forecast, data trust and recommended actions.",
+      "status": "Completed",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Established the client-facing output that the dedicated Scale builder would generate and maintain.",
+      "notes": "",
+      "tags": [
+        "Client Report",
+        "Unified"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-092",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Dedicated Scale Report Builder",
+      "description": "Created a Scale-specific AVANI REPORT BUILDER™ instead of continuing to operate from the generic integrated prototype.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Foundation",
+      "why": "Gave Scale a maintainable product workflow tailored to its mixed-source reporting needs.",
+      "notes": "",
+      "tags": [
+        "Scale",
+        "Builder"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-093",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Separate Paid Media, Syndication & Named workspaces",
+      "description": "Separated the builder into source-specific workspaces so Paid Media refresh, Content Syndication inputs and Named-account intelligence could be managed independently.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Reduced confusion and preserved the different operating logic of each source.",
+      "notes": "",
+      "tags": [
+        "Workspaces",
+        "Paid Media",
+        "Syndication",
+        "Named"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-094",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Story-led Content Syndication journey",
+      "description": "Added a dedicated Content Syndication journey treatment inside the unified Scale report so delivery and content progression could be explained as a coherent story alongside Paid Media without collapsing the channels together.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Gave Content Syndication its own narrative role inside the unified client report rather than reducing it to a supporting table.",
+      "notes": "Grounded in the dedicated Scale builder V15 lineage, which explicitly introduced a story-led Content Syndication journey.",
+      "tags": [
+        "Content Syndication",
+        "Journey",
+        "Cross-channel"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-095",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Interactive volume pacing calendar",
+      "description": "Added target-lead, planned-completion and weekly-wave inputs for Core and Named programs, with pacing calculated from supplied delivery waves and projections withheld when the required target or timing inputs are absent.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Made pacing and completion context interactive while protecting the client report from invented forecasts.",
+      "notes": "",
+      "tags": [
+        "Pacing",
+        "Calendar",
+        "Forecast Guardrail"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-096",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Weekly Hot Accounts configuration workspace",
+      "description": "Integrated weekly Hot Accounts controls into the Scale builder, including report week, score threshold, Top N, source label, interest themes and optional mover/detail views.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Intelligence",
+      "why": "Brought weekly named-account prioritization into the report-building workflow instead of treating it as a separate manual handoff.",
+      "notes": "",
+      "tags": [
+        "Hot Accounts",
+        "Named",
+        "Weekly"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-097",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Scale wordmark + official lookup controls",
+      "description": "Embedded the approved Scale Computing wordmark as the default, added website-based official wordmark lookup, locked the higher-quality provider configuration, supported approved uploads/direct URLs, and kept logo-mark fallback opt-in.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made the dedicated Scale report brand-safe while still supporting controlled replacement of approved client artwork.",
+      "notes": "",
+      "tags": [
+        "Wordmark",
+        "Branding",
+        "Brandfetch"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-098",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Client-only generated preview",
+      "description": "Made the Scale preview render the client-only report rather than exposing builder/internal controls in the output.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Made preview QA reflect the exact report experience intended for the client.",
+      "notes": "",
+      "tags": [
+        "Client Only",
+        "Preview"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-099",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "1440px desktop preview canvas",
+      "description": "Added a fixed desktop report canvas with builder-side scaling so the generated report could be reviewed at its intended desktop width.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Improved visual QA without forcing the builder window itself to be 1440px wide.",
+      "notes": "",
+      "tags": [
+        "Preview",
+        "Desktop"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-100",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Open Preview in separate tab",
+      "description": "Added a control to open the same generated client report in a separate browser tab for direct review.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made it easier to inspect the client output outside the builder frame.",
+      "notes": "",
+      "tags": [
+        "Preview",
+        "Open"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-101",
+      "studio": "scale",
+      "category": "Dedicated Builder & Workspaces",
+      "title": "Standalone HTML export for Scale",
+      "description": "Added download of the generated Scale client report as standalone HTML.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Publishing",
+      "why": "Kept a portable output path alongside live publishing.",
+      "notes": "",
+      "tags": [
+        "HTML",
+        "Export"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-102",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Source-aware Paid Media readouts",
+      "description": "Refined Paid Media narrative and metrics so readouts are tied to the actual source window and available source fields.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Reduced stale or unsupported narrative when the paid source changed.",
+      "notes": "",
+      "tags": [
+        "Paid Media",
+        "Source Aware"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-103",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Paid Media source refresh workflow",
+      "description": "Added a dedicated refresh path for current Paid Media performance data and campaign collections.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Reduced repeated manual re-entry of Paid Media performance into the builder.",
+      "notes": "",
+      "tags": [
+        "Paid Media",
+        "Refresh"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-104",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Paid Media refresh resilience",
+      "description": "Made refresh behavior preserve the last confirmed Paid Media data when a newer refresh cannot return usable structured rows.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Prevents a temporary source failure from blanking or corrupting the active report.",
+      "notes": "",
+      "tags": [
+        "Refresh",
+        "Resilience"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-105",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Dynamic Paid Media source-window labels",
+      "description": "Made Paid Media data-period labels reflect the actual loaded source period rather than relying on static reporting copy.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Keeps client-facing time-window context aligned with the source data.",
+      "notes": "",
+      "tags": [
+        "Paid Media",
+        "Period Labels"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-106",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Paid Media operational status controls",
+      "description": "Added explicit in-flight status controls for Core/Named Paid Media programs and supporting channel/campaign states, including active, reactivated, optimization-watch and scheduled-conclusion context used in the generated report.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Let the client report distinguish performance from operational campaign state instead of inferring status from metrics alone.",
+      "notes": "",
+      "tags": [
+        "Paid Media",
+        "Status",
+        "Channels"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-107",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Video completion benchmark context",
+      "description": "Added an editable completion-reference percentage and benchmark label so video performance could be interpreted against client-provided context without presenting the benchmark as a builder-generated fact.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Data Logic",
+      "why": "Provides useful performance context while preserving the provenance of the benchmark.",
+      "notes": "",
+      "tags": [
+        "Video",
+        "Benchmark",
+        "Context"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-108",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Campaign collections",
+      "description": "Added campaign-level Paid Media collections so performance and creative evidence could be organized by campaign/ad instead of as one flat asset list.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Made creative and campaign review more usable inside the client report.",
+      "notes": "",
+      "tags": [
+        "Campaign Collections",
+        "Creative"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-109",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Campaign creative studio + mosaic asset wall",
+      "description": "Built a visual Paid Media creative studio and mosaic asset wall so campaign creative could be browsed as part of the client report rather than only through source links or tables.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "UX",
+      "why": "Turned creative evidence into a client-facing analysis experience and made the integrated report more useful for campaign review.",
+      "notes": "Grounded in the Scale dedicated builder V15 lineage, which explicitly introduced the campaign creative studio and mosaic asset wall.",
+      "tags": [
+        "Creative Studio",
+        "Mosaic",
+        "Assets"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-110",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Paid Media campaign & creative matrix",
+      "description": "Added a structured client-facing matrix by segment, platform, campaign, creative, status, ad set, key metric and asset links.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Feature",
+      "why": "Connected Paid Media performance, operating state and creative evidence in one inspectable client view.",
+      "notes": "Grounded in the generated Scale Computing Unified Campaign Intelligence client report.",
+      "tags": [
+        "Paid Media",
+        "Creative Matrix",
+        "Campaign Detail"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-111",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "Creative / asset synchronization",
+      "description": "Added synchronization of supported creative links and asset evidence when the source data exposes a defensible campaign/ad match.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Reduced manual asset-library maintenance while avoiding unsupported creative attribution.",
+      "notes": "",
+      "tags": [
+        "Creative",
+        "Sync"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-112",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "AgencyAnalytics PDF fallback refresh",
+      "description": "Added PDF fallback import for refreshing performance KPIs, supported benchmark/week labels, readouts, pacing and trends without changing campaign creative links.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Created a fallback when row-level source data was not available.",
+      "notes": "",
+      "tags": [
+        "PDF",
+        "Fallback",
+        "Paid Media"
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-113",
+      "studio": "scale",
+      "category": "Paid Media Source Automation",
+      "title": "CSV / XLSX row-level Paid Media fallback",
+      "description": "Kept CSV/XLSX fallback support for row-level performance and campaign creative collections when the required columns are supplied.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Reliability",
+      "why": "Preserved a structured-data path when the primary refresh source was unavailable.",
+      "notes": "",
+      "tags": [
+        "CSV",
+        "Excel",
+        "Fallback"
+      ],
+      "order": 12
+    },
+    {
+      "id": "m-114",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Data & Logic QA",
+      "description": "Added an explicit Data & Logic QA stage for source reconciliation and client-output readiness.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Made report trust a first-class step instead of relying only on visual inspection.",
+      "notes": "",
+      "tags": [
+        "QA",
+        "Reconciliation"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-115",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Critical QA publish blocking",
+      "description": "Blocked live publishing when Data QA detects unresolved critical reconciliation issues.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Prevents known critical data problems from reaching the client report.",
+      "notes": "",
+      "tags": [
+        "QA",
+        "Publish Gate"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-116",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Preview validation checkpoint",
+      "description": "Made report preview validation one of the final checkpoints before publishing.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Adds visual/output review after data checks and before client delivery.",
+      "notes": "",
+      "tags": [
+        "Preview",
+        "Validation"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-117",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "PDF color compatibility",
+      "description": "Adjusted Scale report styling/export behavior to improve compatibility with PDF generation and avoid problematic rendered colors.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Fix / Stabilization",
+      "why": "Kept the exported PDF visually usable without changing the live report design intent.",
+      "notes": "",
+      "tags": [
+        "PDF",
+        "Compatibility"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-118",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Strict manifest trial",
+      "description": "Tested a stricter campaign/ad-to-asset manifest aligned to the available Paid Media evidence.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Explored a more defensible way to prove which creative belongs to each campaign/ad.",
+      "notes": "",
+      "tags": [
+        "Manifest",
+        "Creative QA"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-119",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Automatic strict manifest",
+      "description": "Automated manifest rebuilding when Paid Media campaign collections are loaded or refreshed.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Automation",
+      "why": "Turned creative-evidence reconciliation into a repeatable builder process instead of a manual checklist.",
+      "notes": "",
+      "tags": [
+        "Manifest",
+        "Automation"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-120",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Manifest matched / ambiguous / missing / retired states",
+      "description": "Added manifest states that distinguish confirmed matches from ambiguous, missing-asset and retired/inactive cases.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "QA",
+      "why": "Makes creative-evidence uncertainty explicit instead of silently treating every row as resolved.",
+      "notes": "",
+      "tags": [
+        "Manifest",
+        "States"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-121",
+      "studio": "scale",
+      "category": "QA, Reconciliation & Reliability",
+      "title": "Original live campaign sheet restored as source of truth",
+      "description": "Re-centered the Paid Media operating workflow on the original live campaign sheet plus approved creative sources rather than a replacement source path.",
+      "status": "Live",
+      "period": "Aug 2026",
+      "workType": "Fix / Stabilization",
+      "why": "Preserved the operating source the team already relied on while keeping the newer automation layers.",
+      "notes": "",
+      "tags": [
+        "Source of Truth",
+        "Campaign Sheet"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-122",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Dedicated live builder publishing",
+      "description": "Added a dedicated workflow for publishing Scale builder updates to the permanent Scale builder location.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Publishing",
+      "why": "Separated builder deployment from report publication.",
+      "notes": "",
+      "tags": [
+        "Publishing",
+        "Builder"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-123",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Dedicated live report publishing",
+      "description": "Added a dedicated workflow for publishing the current generated Scale client report.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Publishing",
+      "why": "Made live report delivery a repeatable action inside the builder.",
+      "notes": "",
+      "tags": [
+        "Publishing",
+        "Report"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-124",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Private publisher key + token isolation",
+      "description": "Kept the repository publishing credential outside the standalone builder HTML and required a private publish key for the connected route.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Reliability",
+      "why": "Reduced credential exposure in a client-report-building tool.",
+      "notes": "",
+      "tags": [
+        "Publishing",
+        "Security"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-125",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Publish confirmation safeguards",
+      "description": "Added confirmation before replacing live builder or report index files.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "QA",
+      "why": "Reduced accidental overwrites of live client/report assets.",
+      "notes": "",
+      "tags": [
+        "Publishing",
+        "Safeguard"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-126",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Source refresh before live report publish",
+      "description": "Made live report publishing refresh Paid Media and Content Syndication inputs before Data QA and report rebuild where possible.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Automation",
+      "why": "Reduces the chance of publishing a stale report when newer source data is available.",
+      "notes": "",
+      "tags": [
+        "Publishing",
+        "Refresh"
+      ],
+      "order": 5
+    },
+    {
+      "id": "m-127",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Preserve last confirmed data on refresh failure",
+      "description": "Kept the last confirmed Paid Media data active when a publish-time refresh could not complete.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Reliability",
+      "why": "Avoids replacing valid report data with an incomplete refresh result.",
+      "notes": "",
+      "tags": [
+        "Reliability",
+        "Refresh"
+      ],
+      "order": 6
+    },
+    {
+      "id": "m-128",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Immutable weekly report history",
+      "description": "Archived the exact client report under a dated history path using Reporting End / Data Through when the live report is published.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Publishing",
+      "why": "Created a durable record of what the client report looked like at each reporting point.",
+      "notes": "",
+      "tags": [
+        "History",
+        "Archive"
+      ],
+      "order": 7
+    },
+    {
+      "id": "m-129",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Client-facing Reporting History",
+      "description": "Surfaced saved dated report snapshots through the client-facing Reporting History control.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Feature",
+      "why": "Lets clients move between reporting snapshots without receiving a different permanent report URL.",
+      "notes": "",
+      "tags": [
+        "History",
+        "Client Experience"
+      ],
+      "order": 8
+    },
+    {
+      "id": "m-130",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Published workspace restoration",
+      "description": "Remembered the exact successfully published workspace on the same browser/device so builder inputs and imported data could be restored when the builder reopened.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "Reliability",
+      "why": "Reduced repeated setup work and made the builder reopen closer to the last published state.",
+      "notes": "",
+      "tags": [
+        "Workspace Memory",
+        "Restore"
+      ],
+      "order": 9
+    },
+    {
+      "id": "m-131",
+      "studio": "scale",
+      "category": "Publishing & Reporting History",
+      "title": "Clear remembered workspace control",
+      "description": "Added a manual control to clear the stored last-published Scale workspace when a fresh setup is required.",
+      "status": "Live",
+      "period": "Aug–Sep 2026",
+      "workType": "UX",
+      "why": "Keeps workspace memory useful without trapping the user in an old state.",
+      "notes": "",
+      "tags": [
+        "Workspace Memory",
+        "Reset"
+      ],
+      "order": 10
+    },
+    {
+      "id": "m-132",
+      "studio": "scale",
+      "category": "Next / Future — Scale Intelligence",
+      "title": "Richer weekly account movement",
+      "description": "Make weekly movement in account-level Paid Media / Syndication signals easier to see and compare over time.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Adds a more useful temporal view of which accounts are strengthening or cooling.",
+      "notes": "",
+      "tags": [
+        "Accounts",
+        "Weekly"
+      ],
+      "order": 1
+    },
+    {
+      "id": "m-133",
+      "studio": "scale",
+      "category": "Next / Future — Scale Intelligence",
+      "title": "Deeper Paid Media recommendations",
+      "description": "Strengthen recommendations tied to Paid Media performance, creative patterns and account priorities.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Moves Scale reporting beyond channel reporting toward action guidance.",
+      "notes": "",
+      "tags": [
+        "Paid Media",
+        "Recommendations"
+      ],
+      "order": 2
+    },
+    {
+      "id": "m-134",
+      "studio": "scale",
+      "category": "Next / Future — Scale Intelligence",
+      "title": "Cross-channel activation signals",
+      "description": "Connect Paid Media, Syndication and account-level signals to identify where another activation motion is warranted.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Intelligence",
+      "why": "Uses the unified Scale dataset to support better cross-channel decisions.",
+      "notes": "",
+      "tags": [
+        "Activation",
+        "Cross-channel"
+      ],
+      "order": 3
+    },
+    {
+      "id": "m-135",
+      "studio": "scale",
+      "category": "Next / Future — Scale Intelligence",
+      "title": "Improved Scale account detail",
+      "description": "Create a deeper account-level view combining Paid Media, Syndication and Named-account context.",
+      "status": "Planned",
+      "period": "Next",
+      "workType": "Feature",
+      "why": "Makes the unified report more useful for account-level review and follow-up.",
+      "notes": "",
+      "tags": [
+        "Account Detail"
+      ],
+      "order": 4
+    },
+    {
+      "id": "m-136",
+      "studio": "scale",
+      "category": "Next / Future — Scale Intelligence",
+      "title": "Scale Next Best Action framework",
+      "description": "Evolve the Scale report toward clearer recommended actions across Paid Media, Syndication, ABM and Handraiser-style motions where relevant.",
+      "status": "Future",
+      "period": "Future",
+      "workType": "Intelligence",
+      "why": "Extends the unified report from observing campaign performance into recommended activation.",
+      "notes": "",
+      "tags": [
+        "Next Best Action",
+        "Activation"
+      ],
+      "order": 5
+    }
+  ]
+}
